@@ -67,7 +67,16 @@
               <span>Category</span>
             </a>
           </li>
-
+          <li>
+            <a href="{{ url('admin/donor_data') }}">
+              <span>Donor Data</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ url('admin/report') }}">
+              <span>Report Data</span>
+            </a>
+          </li>
         </ul>
       </div>
       <!-- sidebar-menu  -->

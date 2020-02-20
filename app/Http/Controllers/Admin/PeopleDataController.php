@@ -12,7 +12,8 @@ class PeopleDataController extends Controller
         $people=People::all();
         return view('Admin.people_data.index',compact('people'));
     }
-    public function destroy(){
-
+    public function destroy($id){
+        People::find($id)->delete();
+        return redirect()->back()->with(['message'=>'People deleted successfully !!']);
     }
 }

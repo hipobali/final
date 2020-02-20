@@ -25,7 +25,6 @@
                         <tr>
                             <th>ID</th>
                             <th>Foundation</th>
-                            <th>User</th>
                             <th>Detail</th>
                             <th>Image</th>
                             <th>Post Category</th>
@@ -39,7 +38,7 @@
                          <tr>
                          <td>{{ $key+1 }}</td>
                          <td class="text-center">{{$data->foundation->foundation_name}}</td>
-                         <td class="text-center">{{$data->userPost->user_id}}</td>
+                      
                          <td class="text-center">{{$data->f_post_detail}}</td>
                          <td class="text-center">
                             <img src="{{url('uploads/'.$data->f_post_image)}}" class="img-fluid"></td>

@@ -11,5 +11,9 @@ class FoundationDataController extends Controller
         $foundation=Foundation::all();
             return view('Admin.foundation_data.index',compact('foundation'));
     }
+    public function destroy($id){
+        Foundation::find($id)->delete();
+        return redirect()->back()->with(['message'=>'Foundation  deleted successfully !!']);
+    }
 
 }

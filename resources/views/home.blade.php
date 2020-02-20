@@ -60,7 +60,7 @@
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <img class="mb-4" src="{{route('f_image_post',['foundation_post'=>$foundation_posts->f_post_image])}}" width="465" height="240">
+                                                        <img class="mb-4" src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="465" height="240">
                                                         <p class="text-left">  {{$foundation_posts->f_post_detail}}</p>
                                                     </div>
                                                     <div class="modal-footer">
@@ -108,9 +108,9 @@
                             <div class="donation_data ">
                                 <div class="donation_data_photo">
                                     @if($foundation_posts->user_post_id==0)
-                                        <img src="{{route('f_image_post',['foundation_post'=>$foundation_posts->f_post_image])}}" width="260" height="240">
+                                        <img src="{{url('uploads/'.$foundation_posts->f_post_image])}}" width="260" height="240">
                                     @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
-                                        <img src="{{route('confirm_user_post_image',[$foundation_posts->userPost->image])}}" width="260" height="240">
+                                        <img src="{{route('confirm_user_post_image',[$foundation_posts->userPost->image)}}" width="260" height="240">
                                     @endif
                                     <p class="category_tab orphan">
                                         {{$foundation_posts->f_post_category}}
@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="donation_data_ttl">
                                     <a data-toggle="modal" data-target="#exampleModal{{$foundation_posts->foundation_id}}">
-                                        <img  src="{{route('getFoundationProfile',['foundation_post'=>$foundation_posts->foundation->foundation_profile])}}" width="38" height="38">
+                                        <img  src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}" width="38" height="38">
                                     </a>
                                     <div class="modal fade" id="exampleModal{{$foundation_posts->foundation_id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -136,7 +136,7 @@
 
                                                         <!-- Avatar -->
                                                         <div class="avatar mx-auto white mt-3">
-                                                            <img  src="{{route('getFoundationProfile',[$foundation_posts->foundation->foundation_profile])}}" class="rounded-circle" height="auto" width="200" alt="woman avatar">
+                                                            <img  src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}" class="rounded-circle" height="auto" width="200" alt="woman avatar">
                                                         </div>
                                                         <!-- Content -->
                                                         <div class="card-body">

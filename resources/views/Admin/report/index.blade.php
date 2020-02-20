@@ -24,38 +24,21 @@
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>People Id</th>
-                            <th>User Id</th>
-                            <th>Title</th>
-                            <th>Location</th>
-                            <th>Name</th>
-                            <th>Item Requested</th>
-                            <th>Cost</th>
-                            <th>Significant</th>
-                            <th>Phone</th>
-                            <th>Image</th>
-                            <th>Remark</th>
+                            <th>User Post Id</th>
+                            <th>Report Foundation Name</th>
+                            <th>Report Founation Option</th>
                             <th>Created Date</th>
                             <th>Updated Date</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody id="table_body">
-                        @forelse($people_post as $key => $data)
+                        @forelse($report as $key => $data)
                         <tr>
                             <td>{{ $key+1 }}</td>
-                             <td class="text-center">{{$data->people_id}}</td>
-                            <td class="text-center">{{$data->user_id}}</td>
-                            <td class="text-center">{{$data->title}}</td>
-                            <td class="text-center">{{$data->location}}</td>
-                            <td class="text-center">{{$data->name}}</td>
-                            <td class="text-center">{{$data->items_requested}}</td>
-                            <td class="text-center">{{$data->cost}}</td>
-                            <td class="text-center">{{$data->significance}}</td>
-                            <td class="text-center">{{$data->phone}}</td>
-                            <td class="text-center">
-                                <img src="{{url('uploads/'.$data->image)}}" class="img-fluid"></td>
-                            <td class="text-center">{{$data->remark}}</td>
+``                         <td class="text-center">{{$data->user_post_id}}</td>
+                            <td class="text-center">{{$data->report_foundation_name}}</td>
+                            <td class="text-center">{{$data->report_foundation_option}}</td>
                             <td class="text-center">{{$data->created_at}}</td>
                             <td class="text-center">{{$data->updated_at}}</td>
                                 <td><i class="fas fa-trash-alt delete_i" data-id="{{ $data->id }}" id="show_btn"></i></td>

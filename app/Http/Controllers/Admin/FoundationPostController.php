@@ -12,4 +12,8 @@ class FoundationPostController extends Controller
         $foundation_post=foundationPost::all();
         return view('Admin.foundation_post.index',compact('foundation_post'));
     }
+    public function destroy($id){
+        foundationPost::find($id)->delete();
+        return redirect()->back()->with(['message'=>'Foundation Post deleted successfully !!']);
+    }
 }

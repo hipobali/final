@@ -69,7 +69,7 @@ class FoundationController extends Controller
         $foundation->foundation_certificate=$input['foundation_certificate'];
         $foundation->member_count=$request['member_count'];
         $foundation->save();
-        return redirect()->back()->with(['success'=>'Your account have been created successfully']);
+        return view('auth.login.foundation');
     }
 
     public function postFoundationRequest(Request $request)
@@ -84,7 +84,7 @@ class FoundationController extends Controller
             $input['f_post_image'] = isset($input['f_post_image']) ? \Storage::disk('uploads')->putFileAs('foundation_post', $input['f_post_image'], $name) : '';
             $foundation_post=new foundationPost();
             $foundation_post->foundation_id=$foundation['id'];
-            $foundation_post->user_post_id=$request['user_post_id'];
+            $foundation_post->user_post_id=$foundation->user_id;
             $foundation_post->f_post_detail=$request['f_post_detail'];
             $foundation_post->f_post_image= $input['f_post_image'];
             $foundation_post->f_post_category=$request['f_post_category'];

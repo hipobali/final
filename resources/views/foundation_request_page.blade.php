@@ -21,7 +21,7 @@
             </div>
             <div class="col-md-5 ">
 
-                @foreach($user_post as $user_posts)
+                @forelse($user_post as $user_posts)
                 <!-- Card -->
 
                     <div class="card card2 promoting-card" style="margin-bottom: 30px; border-radius: 10px;" id="peopleInNeedCard">
@@ -165,7 +165,7 @@
                                         <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel"><strong>Post About Donation</strong></h5>
+                                                    <h5 class="modal-title " style="color:black;" id="exampleModalLabel"><strong >Post About Donation</strong></h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -219,7 +219,9 @@
                         </div>
                     </div>
                     <!-- Card -->
-                @endforeach
+              @empty
+              <p>There is no request yet !!</p>
+                    @endforelse
 
                     @foreach($donateForm as $donateForms)
                         @if($donateForms->donate_foundation==Auth::user()->name)
@@ -240,36 +242,9 @@
                                     <p>Posted date::{{$donateForms->donor_date}}</p>
 
                                 </div>
-{{--                                <div class="card-footer">--}}
-{{--                                    <p id="showText1"></p>--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-md-4 offset-4">--}}
-{{--                                            <button id="btn_accept{{$donateForms->id}}" class="btn btn_accept myButton btn1 btn-block "  data-toggle="modal" data-target="#accept{{$donateForms->id}}"><b>Accept</b></button>--}}
-{{--                                            <!-- Modal -->--}}
-{{--                                            <div class="modal right fade " id="accept{{$donateForms->id}}" tabindex="-1" role="dialog" aria-labelledby="accept" aria-hidden="true" data-backdrop="true">--}}
-{{--                                                <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">--}}
-{{--                                                    <div class="modal-content">--}}
-{{--                                                        <div class="modal-header" >--}}
-{{--                                                            <h4> Please Be Careful!</h4>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="modal-body">--}}
-{{--                                                            <strong>Are you sure to take full responsible for this post??</strong>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="modal-footer">--}}
-{{--                                                            <button type="button" class="btn myButton" data-dismiss="modal"><b>Cancel</b></button>--}}
-{{--                                                            <button type="submit" id="accepted{{$donateForms->id}}" class="accepted btn myButton" data-dismiss="modal"><b>OK</b></button>--}}
-{{--                                                        </div>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <!-- Modal -->--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
                             </div>
                         @endif
                     @endforeach
-
             </div>
             <div class="col-md-4 mb-5">
                 <div class="card request_card position-fixed">

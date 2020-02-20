@@ -50,8 +50,7 @@ class peopleController extends Controller
         $people->phone = $request['phone'];
         $people->user_gender=$request['user_gender'];
         $people->save();
-//        Storage::disk('user_profile')->put($img_user_profile_name,file::get($img_user_profile_file));
-        return redirect()->back()->with(['success'=>'Your account have been created successfully.']);
+        return view('auth.login.people');
 
     }
 
@@ -59,8 +58,9 @@ class peopleController extends Controller
        $id=$request['id'];
        $people=People::where('user_id',$id)->first();
 
-        $img_user_post_name=md5(microtime()).'.'.$request->file('image')->getClientOriginalExtension();
-        $img_user_post_file=$request->file('image');
+       $input = $request->all();
+       $name = uniqid('user_post-') . '.' . $input['image']->extension();
+       $input['image'] = isset($input['image']) ? \Storage::disk('uploads')->putFileAs('user_post', $input['image'], $name) : '';
         $user_post=new userPost();
         $user_post->people_id=$people['id'];
         $user_post->user_id=$id;

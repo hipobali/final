@@ -12,4 +12,8 @@ class AdminDataController extends Controller
         $admin_data=Admin::all();
         return view('Admin.admin_data.index',compact('admin_data'));
     }
+    public function destroy($id){
+        Admin::find($id)->delete();
+        return redirect()->back()->with(['message'=>'Admin deleted successfully !!']);
+    }
 }
