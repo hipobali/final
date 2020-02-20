@@ -24,30 +24,42 @@
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Foundation</th>
-                            <th>User</th>
-                            <th>Detail</th>
+                            <th>People Id</th>
+                            <th>User Id</th>
+                            <th>Title</th>
+                            <th>Location</th>
+                            <th>Name</th>
+                            <th>Item Requested</th>
+                            <th>Cost</th>
+                            <th>Significant</th>
+                            <th>Phone</th>
                             <th>Image</th>
-                            <th>Post Category</th>
+                            <th>Remark</th>
                             <th>Created Date</th>
                             <th>Updated Date</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody id="table_body">
-                        @forelse($foundation_post as $key => $data)
-                         <tr>
-                         <td>{{ $key+1 }}</td>
-                         <td class="text-center">{{$data->foundation->foundation_name}}</td>
-                         <td class="text-center">{{$data->userPost->user_id}}</td>
-                         <td class="text-center">{{$data->f_post_detail}}</td>
-                         <td class="text-center">
-                            <img src="{{url('uploads/'.$data->f_post_image)}}" class="img-fluid"></td>
-                         <td class="text-center">{{$data->f_post_category}}</td>
-                        <td class="text-center">{{$data->created_at}}</td>
-                         <td class="text-center">{{$data->updated_at}}</td>
-                               <td><i class="fas fa-trash-alt delete_i" data-id="{{ $data->id }}" id="show_btn"></i></td>
-                            </tr>
+                        @forelse($people_post as $key => $data)
+                        <tr>
+                            <td>{{ $key+1 }}</td>
+``                         <td class="text-center">{{$data->people_id}}</td>
+                            <td class="text-center">{{$data->user_id}}</td>
+                            <td class="text-center">{{$data->title}}</td>
+                            <td class="text-center">{{$data->location}}</td>
+                            <td class="text-center">{{$data->name}}</td>
+                            <td class="text-center">{{$data->items_requested}}</td>
+                            <td class="text-center">{{$data->cost}}</td>
+                            <td class="text-center">{{$data->significance}}</td>
+                            <td class="text-center">{{$data->phone}}</td>
+                            <td class="text-center">
+                                <img src="{{url('uploads/'.$data->image)}}" class="img-fluid"></td>
+                            <td class="text-center">{{$data->remark}}</td>
+                            <td class="text-center">{{$data->created_at}}</td>
+                            <td class="text-center">{{$data->updated_at}}</td>
+                                <td><i class="fas fa-trash-alt delete_i" data-id="{{ $data->id }}" id="show_btn"></i></td>
+                        </tr>
                        @empty
                            <tr><td colspan="16" class="text-center"> There is no data </td></tr>
                         @endforelse
@@ -64,7 +76,7 @@
                 <div class="modal-content">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">Delete Foundation</h4>
+                        <h4 class="modal-title">Delete People</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- Modal body -->

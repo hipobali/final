@@ -9,9 +9,7 @@ class FoundationDataController extends Controller
 {
     public function index(){
         $foundation=Foundation::all();
-            return view('admin.foundation_data.index',compact('foundation'));
+            return view('Admin.foundation_data.index',compact('foundation'));
     }
-    public function destory(){
 
-    }
 }

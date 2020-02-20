@@ -16,4 +16,7 @@ class foundationPost extends Model
     public function userPost(){
         return $this->belongsTo('App\userPost');
     }
+    public  function  user(){
+        return $this->belongsTo('App\User');
+    }
 }

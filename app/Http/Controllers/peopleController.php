@@ -31,8 +31,6 @@ class peopleController extends Controller
 
     public function postpeopleRegister(PeopleRegisterRequest $request)
     {
-//        $img_user_profile_name=md5(microtime()).'.'.$request->file('user_profile')->getClientOriginalExtension();
-//        $img_user_profile_file=$request->file('user_profile');
 
         $input = $request->all();
         $name = uniqid('user_profile-') . '.' . $input['user_profile']->extension();

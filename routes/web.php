@@ -18,6 +18,7 @@ Route::group(['middleware'=>['auth']],function (){
     Route::get('/home', 'HomeController@index')->name('home');
 
 });
+
 //Welcome
 Route::get('/','welcomeController@getWelcome')->name('/');
 
@@ -35,7 +36,7 @@ Route::get('locale/{locale}',function ($locale){
     return redirect()->back();
 });
 
-//donor 
+//donor
 Route::get('/donor/home/','donorController@getDonorHome')->name('donor_home');
 Route::get('donation/form/','donorController@getDonationForm')->name('get_donation_form');
 Route::post('donate/Form','donorController@postDonateForm')->name('donate_form');

@@ -74,19 +74,29 @@ class FoundationController extends Controller
 
     public function postFoundationRequest(Request $request)
     {
+
         $id=$request['id'];
         $foundation=Foundation::where('user_id',$id)->first();
         $input = $request->all();
-        $name = uniqid('foundation_post-') . '.' . $input['f_post_image']->extension();
-        $input['f_post_image'] = isset($input['f_post_image']) ? \Storage::disk('uploads')->putFileAs('foundation_post', $input['f_post_image'], $name) : '';
-           $foundation_post=new foundationPost();
+
+        if($request->hasFile('f_post_image')){
+            $name = uniqid('foundation_post-') . '.' . $input['f_post_image']->extension();
+            $input['f_post_image'] = isset($input['f_post_image']) ? \Storage::disk('uploads')->putFileAs('foundation_post', $input['f_post_image'], $name) : '';
+            $foundation_post=new foundationPost();
             $foundation_post->foundation_id=$foundation['id'];
             $foundation_post->user_post_id=$request['user_post_id'];
             $foundation_post->f_post_detail=$request['f_post_detail'];
-            $foundation_post->f_post_image=  $input['f_post_image'];
+            $foundation_post->f_post_image= $input['f_post_image'];
             $foundation_post->f_post_category=$request['f_post_category'];
             $foundation_post->save();
-        
+            return redirect()->back();
+        }
+            $foundation_post=new foundationPost();
+            $foundation_post->foundation_id=$foundation['id'];
+            $foundation_post->user_post_id=$request['user_post_id'];
+            $foundation_post->f_post_detail=$request['f_post_detail'];
+            $foundation_post->f_post_category=$request['f_post_category'];
+            $foundation_post->save();
             return redirect()->back();
 
     }

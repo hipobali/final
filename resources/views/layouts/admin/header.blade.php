@@ -23,6 +23,7 @@
       </div>
       <div class="sidebar-menu">
         <ul>
+
           <li class="header-menu">
             <span>General</span>
           </li>
@@ -31,6 +32,7 @@
               <span>User Data</span>
             </a>
           </li>
+
           <li>
             <a href="{{ url('admin/admin_data') }}">
               <span>Admin Data</span>
@@ -41,23 +43,31 @@
               <span> User Foundation Data</span>
             </a>
           </li>
+
           <li>
             <a href="{{ url('admin/foundation_post') }}">
               <span>Foundation Post Data</span>
             </a>
           </li>
+
           <li>
             <a href="{{ url('admin/people_data') }}">
               <span>People In Need Data</span>
             </a>
           </li>
-         
-          <li>
+
+            <li>
+                <a href="{{ url('admin/people_post') }}">
+                    <span>People Request Post</span>
+                </a>
+            </li>
+
+            <li>
             <a href="{{ url('admin/category') }}">
               <span>Category</span>
             </a>
           </li>
-         
+
         </ul>
       </div>
       <!-- sidebar-menu  -->

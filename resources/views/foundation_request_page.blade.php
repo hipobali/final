@@ -30,7 +30,7 @@
                             <div class="row">
                                 <div class="col-md-6 d-flex flex-row">
                                     <!-- Avatar -->
-                                    <a  data-toggle="modal" data-target="#exampleModal{{$user_posts->people->id}}">  <img src="{{route('getUserProfile',[$user_posts->people->user_profile])}}" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar"></a>
+                                    <a  data-toggle="modal" data-target="#exampleModal{{$user_posts->people->id}}">  <img src="{{url('uploads/'.$user_posts->people->user_profile)}}" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar"></a>
                                     <!-- Content -->
                                     <div>
                                         <!-- Title -->
@@ -54,7 +54,7 @@
 
                                                             <!-- Avatar -->
                                                             <div class="avatar mx-auto white mt-3">
-                                                                <img  src="{{route('get_user_profile',[$user_posts->people->user_profile])}}" class="rounded-circle" height="auto" width="200" alt="woman avatar">
+                                                                <img  src="{{url('uploads/'.$user_posts->people->user_profile)}}" class="rounded-circle" height="auto" width="200" alt="woman avatar">
                                                             </div>
                                                             <!-- Content -->
                                                             <div class="card-body">

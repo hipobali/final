@@ -10,7 +10,7 @@ class PeopleDataController extends Controller
 {
     public function index(){
         $people=People::all();
-        return view('admin.people_data.index',compact('people'));
+        return view('Admin.people_data.index',compact('people'));
     }
     public function destroy(){
 
