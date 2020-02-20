@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c668fa95-a317-468b-99d5-cf0521a9f8b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FoundationDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FoundationDataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PeopleDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PeopleDataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FoundationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FoundationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/peopleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/peopleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/foundationPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/foundationPost.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_04_105208_create_foundation_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_04_105208_create_foundation_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/nav_test.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/nav_test.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/welcomeCss/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/welcomeCss/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/welcomeCss/news.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/welcomeCss/news.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/foundation_post/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/foundation_post/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/foundation_request_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/foundation_request_page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin_web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin_web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="c668fa95-a317-468b-99d5-cf0521a9f8b2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,7 +192,7 @@
       <workItem from="1580980895262" duration="1759000" />
       <workItem from="1581044908508" duration="1376000" />
       <workItem from="1581046302480" duration="4598000" />
-      <workItem from="1582175269924" duration="7229000" />
+      <workItem from="1582175269924" duration="7512000" />
     </task>
     <servers />
   </component>
