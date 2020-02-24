@@ -1,4 +1,5 @@
 <script src="{{asset('bst/js/jquery.js')}}"></script>
+
 <nav class="navbar  fixed-top navbar-expand-md nav-bg shadow-sm">
     <div class="container-fluid">
         @if(Auth::user())

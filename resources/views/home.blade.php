@@ -28,16 +28,16 @@
                                 <div class="urgent_photo">
                                     <div class="urgent_img">
                                         @if(is_null($foundation_posts->user_post_id))
-                                            <img src="{{route('f_image_post',['foundation_post'=>$foundation_posts->f_post_image])}}" alt="Urgent_photo" width="234" height="200">
+                                            <img src="{{url('uploads/'.$foundation_posts->f_post_image)}}" alt="Urgent_photo" width="234" height="200">
                                         @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
-                                            <img src="{{route('confirm_user_post_image',[$foundation_posts->userPost->image])}}" alt="Urgent_photo" width="234" height="200">
+                                            <img src="{{url('uploads/'.$foundation_posts->userPost->image)}}" alt="Urgent_photo" width="234" height="200">
                                         @endif
                                     </div>
                                 </div>
                                 <div class="urgent_txt">
                                     <div class="urgent_txt_ttl">
                                         <a data-toggle="modal" data-target="#exampleModal{{$foundation_posts->foundation_id}}">
-                                            <img  class="foundation_people" src="{{route('getFoundationProfile',['foundation_post'=>$foundation_posts->foundation->foundation_profile])}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
+                                            <img  class="foundation_people" src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
                                         </a>
                                         <h4 >{{$foundation_posts->foundation->foundation_name}}</h4>
 
@@ -53,7 +53,7 @@
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <img class="foundation_people" src="{{route('getFoundationProfile',['foundation_post'=>$foundation_posts->foundation->foundation_profile])}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
+                                                        <img class="foundation_people" src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
                                                         <h4 class="ml-2 mt-3" >{{$foundation_posts->foundation->foundation_name}}</h4>
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
@@ -64,7 +64,7 @@
                                                         <p class="text-left">  {{$foundation_posts->f_post_detail}}</p>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <a href="{{route('get_donation_form',$foundation_posts->id)}}" type="button" class="btn btn-primary">Donate Now</a>
+                                                        <a href="{{url('uploads/'.$foundation_posts->id)}}" type="button" class="btn btn-primary">Donate Now</a>
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
@@ -108,9 +108,9 @@
                             <div class="donation_data ">
                                 <div class="donation_data_photo">
                                     @if($foundation_posts->user_post_id==0)
-                                        <img src="{{url('uploads/'.$foundation_posts->f_post_image])}}" width="260" height="240">
+                                        <img src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="260" height="240">
                                     @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
-                                        <img src="{{route('confirm_user_post_image',[$foundation_posts->userPost->image)}}" width="260" height="240">
+                                        <img src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="260" height="240">
                                     @endif
                                     <p class="category_tab orphan">
                                         {{$foundation_posts->f_post_category}}
@@ -187,7 +187,7 @@
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <img class="foundation_people" src="{{route('getFoundationProfile',['foundation_post'=>$foundation_posts->foundation->foundation_profile])}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
+                                                <img class="foundation_people" src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
                                                 <h4 class="ml-2 mt-3" >{{$foundation_posts->foundation->foundation_name}}</h4>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
@@ -195,9 +195,9 @@
                                             </div>
                                             <div class="modal-body">
                                                 @if($foundation_posts->user_post_id==0)
-                                                    <img class="mb-4" src="{{route('f_image_post',['foundation_post'=>$foundation_posts->f_post_image])}}" width="465" height="240">
+                                                    <img class="mb-4" src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="465" height="240">
                                                 @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
-                                                    <img class="mb-4" src="{{route('confirm_user_post_image',[$foundation_posts->userPost->image])}}" width="465" height="240">
+                                                    <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="465" height="240">
                                                 @endif
                                                 <p class="text-left">  {{$foundation_posts->f_post_detail}}</p>
                                             </div>
