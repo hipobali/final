@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c668fa95-a317-468b-99d5-cf0521a9f8b2" name="Default Changelist" comment="" />
+    <list default="true" id="c668fa95-a317-468b-99d5-cf0521a9f8b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/donor_home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/donor_home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +130,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Admin/people_in_need_post" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -192,7 +196,9 @@
       <workItem from="1580980895262" duration="1759000" />
       <workItem from="1581044908508" duration="1376000" />
       <workItem from="1581046302480" duration="4598000" />
-      <workItem from="1582175269924" duration="7512000" />
+      <workItem from="1582175269924" duration="7737000" />
+      <workItem from="1582253081616" duration="2783000" />
+      <workItem from="1582512483450" duration="591000" />
     </task>
     <servers />
   </component>

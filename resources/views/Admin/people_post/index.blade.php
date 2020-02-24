@@ -20,7 +20,7 @@
             <div class="container-fluid">
 
                 <div class="table-responsive">
-                    <table  class="table table-bordered table-hover">
+                    <table id="myTable"  class="table table-bordered table-hover">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -128,5 +128,9 @@
                 return( the_arr.join('/') );
             }
         });
+
+        $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
     </script>
 @endsection

@@ -5,7 +5,7 @@
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
-        <a href="{{ url('admin/adminhome') }}">Easy Donate</a>
+        <a href="{{ url('admin/dashboard') }}">Easy Donate</a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>
@@ -27,6 +27,29 @@
           <li class="header-menu">
             <span>General</span>
           </li>
+
+              <li>
+                <a href="{{ url('admin/category') }}">
+                  <span>Category</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ url('admin/donor_data') }}">
+                  <span>Donor Data</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ url('admin/report') }}">
+                  <span>Report Data</span>
+                </a>
+              </li>
+
+
+
+          <li class="header-menu">
+            <span>User</span>
+          </li>
+
           <li>
             <a href="{{ url('admin/dashboard') }}">
               <span>User Data</span>
@@ -40,10 +63,19 @@
           </li>
           <li>
             <a href="{{ url('admin/foundation_data') }}">
-              <span> User Foundation Data</span>
+              <span> Foundation Data</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ url('admin/people_data') }}">
+              <span>People In Need Data</span>
             </a>
           </li>
 
+          <li class="header-menu">
+            <span>Post</span>
+          </li>
+          
           <li>
             <a href="{{ url('admin/foundation_post') }}">
               <span>Foundation Post Data</span>
@@ -51,32 +83,12 @@
           </li>
 
           <li>
-            <a href="{{ url('admin/people_data') }}">
-              <span>People In Need Data</span>
-            </a>
+              <a href="{{ url('admin/people_post') }}">
+              <span>People Request Post</span>
+              </a>
           </li>
 
-            <li>
-                <a href="{{ url('admin/people_post') }}">
-                    <span>People Request Post</span>
-                </a>
-            </li>
-
-            <li>
-            <a href="{{ url('admin/category') }}">
-              <span>Category</span>
-            </a>
-          </li>
-          <li>
-            <a href="{{ url('admin/donor_data') }}">
-              <span>Donor Data</span>
-            </a>
-          </li>
-          <li>
-            <a href="{{ url('admin/report') }}">
-              <span>Report Data</span>
-            </a>
-          </li>
+     
         </ul>
       </div>
       <!-- sidebar-menu  -->

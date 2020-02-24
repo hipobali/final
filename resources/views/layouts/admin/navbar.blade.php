@@ -6,9 +6,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Profile </a>
+                <a style="color:#404e67;  " class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Account </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
                 <!--     <a class="dropdown-item" href="{{ url('profile') }}"><i class="fa fa-user"></i>My account</a> -->
+                    <a class="dropdown-item" href="{{ route('logout') }}"><i class="fas fa-user-alt"></i>Profile</a>
                     <a class="dropdown-item" href="{{ route('logout') }}"><i class="fas fa-sign-out-alt"></i>Log out</a>
                 </div>
             </li>

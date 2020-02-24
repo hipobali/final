@@ -3,7 +3,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: #fff !important;
+  background: #EDEFF2 !important;
 }
 /*sidebar*/
     body {
@@ -78,7 +78,7 @@ html {
     }
     table.table td:last-child .edit_i {
         font-size: 22px;
-        color: #019e00;
+        color: hsl(35,100%,50%);
         margin: 0px 10px;
         padding: 10px 0px 0px 0px;
         margin-bottom: 1px;
@@ -509,7 +509,7 @@ div#back_to a:before {
   padding: 8px 30px 8px 20px;
 }
 .sidebar-wrapper .sidebar-menu ul li a:before {
-    content: "\f0a4";
+    content: "\f07c";
     font-family: "Font Awesome 5 Free";
     font-weight: 400;
     font-style: normal;
@@ -709,7 +709,7 @@ li.left-li {
 /*-----------------------------chiller-theme-------------------------------------------------*/
 
 .chiller-theme .sidebar-wrapper {
-    background: #c7c9cc;
+    background: #fff;
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-header,
@@ -800,11 +800,11 @@ table.table tr th, table.table tr td {
     border-color: #e9e9e9;
     padding: 12px 15px;
     vertical-align: middle;
-    background: #c7c9cc;
+    background: #fff;
     color: #0e0e0e;
 }
 table.table tr th {
-    background: #31353d;
+    background: #404E67;
     width: auto;
     color: #fff;
 }
@@ -812,7 +812,7 @@ table.table tr th {
     padding-right: 28px;
 }
 .plus_category {
-    background: #019e00; /* Old browsers */
+    background: #404E67;; /* Old browsers */
     /*background: linear-gradient(135deg, #31353d 0%,#31353d 84%,#242d75 51%,#242d75 100%);*/
     padding: 10px;
     color: #fff;
@@ -866,7 +866,7 @@ p.minus_category i {
 
 .mb-4, .my-4 {
     margin-bottom: 1.5rem!important;
-    background: #31353d;
+    background: #404E67;
 }
 
 .navbar-dark .navbar-brand {
