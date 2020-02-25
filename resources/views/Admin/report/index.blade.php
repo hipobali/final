@@ -20,7 +20,7 @@
             <div class="container-fluid">
 
                 <div class="table-responsive">
-                    <table  class="table table-bordered table-hover">
+                    <table id="myTable"  class="table table-bordered table-hover">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -36,7 +36,7 @@
                         @forelse($report as $key => $data)
                         <tr>
                             <td>{{ $key+1 }}</td>
-``                         <td class="text-center">{{$data->user_post_id}}</td>
+                         <td class="text-center">{{$data->user_post_id}}</td>
                             <td class="text-center">{{$data->report_foundation_name}}</td>
                             <td class="text-center">{{$data->report_foundation_option}}</td>
                             <td class="text-center">{{$data->created_at}}</td>
@@ -111,5 +111,9 @@
                 return( the_arr.join('/') );
             }
         });
+
+        $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
     </script>
 @endsection

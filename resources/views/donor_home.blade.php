@@ -1,5 +1,4 @@
-@extends('layouts.app1')
-@extends('layouts.nav')
+@extends('layouts.frontend.main')
 @section('content')
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,14 +39,14 @@
                                         @if(is_null($foundation_posts->user_post_id))
                                             <img src="{{url('uploads/'.$foundation_posts->f_post_image)}}" alt="Urgent_photo" width="234" height="200">
                                         @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
-                                            <img src="{{route('confirm_user_post_image',[$foundation_posts->userPost->image])}}" alt="Urgent_photo" width="234" height="200">
+                                            <img src="{{url('uploads/'.$foundation_posts->userPost->image)}}" alt="Urgent_photo" width="234" height="200">
                                         @endif
                                     </div>
                                 </div>
                                 <div class="urgent_txt">
                                     <div class="urgent_txt_ttl">
                                         <a data-toggle="modal" data-target="#exampleModal{{$foundation_posts->foundation_id}}">
-                                            <img  class="foundation_people" src="{{route('getFoundationProfile',['foundation_post'=>$foundation_posts->foundation->foundation_profile])}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
+                                            <img  class="foundation_people" src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
                                         </a>
                                         <h4 >{{$foundation_posts->foundation->foundation_name}}</h4>
 
@@ -306,7 +305,7 @@
 
             });
             $('.urgent_post_section').slick({
-                slidesToShow: 2,
+                slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: false,
                 autoplaySpeed: 1000,
@@ -348,6 +347,32 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
     </script>
-  
+    <script>
+        const $dropdown = $(".dropdown");
+        const $dropdownToggle = $(".dropdown-toggle");
+        const $dropdownMenu = $(".dropdown-menu");
+        const showClass = "show";
+
+        $(window).on("load resize", function() {
+            if (this.matchMedia("(min-width: 768px)").matches) {
+                $dropdown.hover(
+                    function() {
+                        const $this = $(this);
+                        $this.addClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "false");
+                        $this.find($dropdownMenu).addClass(showClass);
+                    },
+                    function() {
+                        const $this = $(this);
+                        $this.removeClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "false");
+                        $this.find($dropdownMenu).removeClass(showClass);
+                    }
+                );
+            } else {
+                $dropdown.off("mouseenter mouseleave");
+            }
+        });
+    </script>
     </body>
 @stop

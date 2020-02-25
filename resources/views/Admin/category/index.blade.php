@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="table-responsive">
-                    <table  class="table table-bordered table-hover">
+                    <table id="myTable" class="table table-bordered table-hover">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -37,7 +37,7 @@
                          <tr>
                                <td>{{ $key+1 }}</td>
                                 <td class="text-center">{{ $data->category_name }}</td>
-                               <td><i class="fas fa-user-edit edit_i" data-id="{{ $data->id }}" id="show_edit_btn"></i><i class="fas fa-trash-alt delete_i" data-id="{{ $data->id }}" id="show_btn"></i></td>
+                               <td><i class="fas fa-edit edit_i" data-id="{{ $data->id }}" id="show_edit_btn"></i><i class="fas fa-trash-alt delete_i" data-id="{{ $data->id }}" id="show_btn"></i></td>
                             </tr>
                        @empty
                            <tr><td colspan="5" class="text-center"> There is no data </td></tr>
@@ -176,5 +176,8 @@
                 return( the_arr.join('/') );
             }
         });
+        $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
     </script>
 @endsection

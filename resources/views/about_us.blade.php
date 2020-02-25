@@ -1,9 +1,5 @@
-@extends('layouts.app1')
-@if(Auth::user())
-    @extends('layouts.nav')
-@else
-@extends('layouts.donor_nav')
-    @endif
+@extends('layouts.frontend.main')
+
 @section('content')
     <title>About Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,7 +100,7 @@
 
         <!-- our developer team -->
         <!-- for each person -->
-        <h5 style="margin: 0 auto; color: hsl(35,100%,50%)">Our Developer Team</h5>
+        <h5 style="margin-left:500px; color: hsl(35,100%,50%)">Our Developer Team</h5>
         <hr style="width: 50%; margin-bottom: 2.5%;">
         <div class="alignment">
             <figure class="snip1566">
