@@ -100,19 +100,7 @@ class FoundationController extends Controller
             return redirect()->back();
 
     }
-
-    public function foundationImagePost($img_post_name)
-    {
-        $file = Storage::disk('foundation_post_image')->get($img_post_name);
-        return response($file, 200);
-    }
-
-    public function getFoundationProfile($img_foundation_profile)
-    {
-        $file=Storage::disk('foundation_profile')->get($img_foundation_profile);
-        return response($file,200);
-    }
-
+    
     public function postFoundationReport(Request $request)
     {
         $report_form=new Report();
@@ -132,3 +120,4 @@ class FoundationController extends Controller
     }
 
 }
+    

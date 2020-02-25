@@ -19,7 +19,7 @@
                 <!-- Authentication Links -->
 
                     <li class="nav-item">
-                        <a class="nav-link" href="">{{__('common.home')}}</a>
+                        <a class="nav-link" href="{{url('donor/home')}}">{{__('common.home')}}</a>
                     </li>
 
                     <li class="nav-item">

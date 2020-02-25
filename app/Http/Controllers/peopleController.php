@@ -71,29 +71,12 @@ class peopleController extends Controller
         $user_post->cost=$request['cost'];
         $user_post->significance=$request['significance'];
         $user_post->phone=$request['phone'];
-        $user_post->image=$img_user_post_name;
+        $user_post->image= $input['image'];
         $user_post->remark=$request['remark'];
         $user_post->save();
-        Storage::disk('user_post')->put($img_user_post_name,file::get($img_user_post_file));
+     
         return redirect()->back()->with(['success'=>'Your post have been successfully submitted to foundations.']);
     }
     //end user post form
-
-    public function getUserPostImage($img_user_post){
-        $file = Storage::disk('user_post')->get($img_user_post);
-        return response($file, 200);
-    }
-
-    public function getConfirmUserPostImage($img_user_post)
-    {
-        $file = Storage::disk('user_post')->get($img_user_post);
-        return response($file, 200);
-    }
-
-    public function getUserProfile($img_user_profile)
-    {
-        $file = Storage::disk('user_profile')->get($img_user_profile);
-        return response($file, 200);
-    }
 
 }

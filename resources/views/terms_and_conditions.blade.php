@@ -1,8 +1,5 @@
-@extends('layouts.app1')
-@if(Auth::user())
-    @extends('layouts.nav')
-@endif
-@extends('layouts.donor_nav')
+@extends('layouts.frontend.main')
+
 @section('content')
     <title>Terms And Conditions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

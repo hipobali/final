@@ -61,6 +61,7 @@ Route::get('/User/about_us','donorController@getAboutUs')->name('about_us');
 //Mail
 Route::post('/Send/Mail/','MailController@sendEmail')->name('send_mail');
 
+
 Route::group(['prefix'=>'foundation','middleware'=>'foundation'],function (){
     Auth::routes(
         [ 'register' => false,]
@@ -68,8 +69,6 @@ Route::group(['prefix'=>'foundation','middleware'=>'foundation'],function (){
     Route::get('/login/view','FoundationController@getFoundationLogin')->name('foundation_login_view');
     Route::get('/request/view/','FoundationController@getFoundationRequestView')->name('foundation_request_view');
     Route::post('/request/post/{id}','FoundationController@postFoundationRequest')->name('foundation_request_post');
-    Route::get('/image/post/{f_post_image}','FoundationController@foundationImagePost')->name('f_image_post');
-    Route::get('data/profile/{foundation_profile}','FoundationController@getFoundationProfile')->name('getFoundationProfile');
     Route::post('report/form/{id}','FoundationController@postFoundationReport')->name('report_form');
 
 });
@@ -82,8 +81,6 @@ Route::group(['prefix'=>'people','middleware'=>'people'],function (){
     Route::get('/login/view','peopleControllerController@getPeopleLogin')->name('people_login_view');
     Route::post('/request/post/form/{id}','peopleController@postPeopleRequest')->name('user_post_form');
     Route::get('/request/post/view','peopleController@getPeoplePostView')->name('request_user_post');
-    Route::get('/user/post/{image}','peopleController@getUserPostImage')->name('get_user_post_image');
-    Route::get('confirm/user/post/{image}','peopleController@getConfirmUserPostImage')->name('confirm_user_post_image');
-    Route::get('user/data/{user_profile}','peopleController@getUserProfile')->name('get_user_profile');
+  
 });
 
