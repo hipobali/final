@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
-use App\Category;
 use App\Foundation;
 use App\foundationPost;
 use App\Http\Requests\AdminPostRequest;
@@ -11,15 +10,19 @@ use App\People;
 use App\Report;
 use App\User;
 use App\userPost;
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session as FacadesSession;
-use Illuminate\Support\Facades\Storage;
 
 class adminController extends Controller
 {
     public function index(){
-        return view('Admin.admin_dashboard');
+        $user=User::all();
+        $foundation=Foundation::all();
+        $people=People::all();
+        $admin=Admin::all();
+        $userpost=userPost::all();
+        $foundationpost=foundationPost::all();
+        $report=Report::all();
+        return view('Admin.admin_dashboard',compact('user','foundation','people','admin','userpost','foundationpost','report'));
     }
 
     public function postAdminRegister(AdminPostRequest $request)

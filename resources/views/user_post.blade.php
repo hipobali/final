@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@extends('layouts.nav')
+@extends('layouts.frontend.main')
 @section('content')
     <link href="{{ asset('css/user_post.css')}}" rel="stylesheet">
     <link href="{{ asset('fa/css/all.css') }}" rel="stylesheet">

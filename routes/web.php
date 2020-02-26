@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Auth;
 
 //Home
 Route::group(['middleware'=>['auth']],function (){
-
     Route::get('/home', 'HomeController@index')->name('home');
-
 });
 
 //Welcome

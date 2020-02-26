@@ -46,8 +46,8 @@
         <!-- foundation -->
         <div class="foundation">
             <div class="row">
-                <div class="col " style="text-align: center; width: 100%;">
-                    <img src="{{asset('img/about_us/united_nations_organization.jpg')}}" alt="foundation image" width="75%"  style="border-radius: 10px; box-shadow: 30px 30px hsl(35,100%,50%);">
+                <div class="col about-img" style="text-align: center; width: 100%;">
+                    <img src="{{asset('img/about_us/united_nations_organization.jpg')}}" alt="foundation image" width="75%"  style="border-radius: 10px; box-shadow: 30px 30px hsl(217.2, 93.5%, 6.1%);">
                 </div>
                 <div class="col " style="text-align: center;">
                     <h5 style="color: hsl(35,100%,50%)">Foundation</h5>
@@ -66,14 +66,15 @@
         <div class="people_in_need">
             <div class="row">
                 <div class="col" style="width: 100%;">
-                    <img src="{{asset('img/about_us/people_in_need.jpg')}}" alt="foundation image" width="75%" style="border-radius: 10px; box-shadow: 30px 30px hsl(35,100%,50%);">
-                </div>
-                <div class="col">
                     <h5 style="color: hsl(35,100%,50%)">People In Need</h5>
                     <p>
                         In the side of people-in-need, they can request the help to the foundation via request form.
                     </p>
                     <hr>
+                </div>
+                <div class="col about-img">
+                    <img src="{{asset('img/about_us/people_in_need.jpg')}}" alt="foundation image" width="75%" style="border-radius: 10px; box-shadow: 30px 30px hsl(217.2, 93.5%, 6.1%);">
+                  
                 </div>
             </div>
         </div>
@@ -82,8 +83,8 @@
         <!-- donor -->
         <div class="donor">
             <div class="row">
-                <div class="col" style="width: 100%;">
-                    <img src="{{asset('img/about_us/donor.jpg')}}" alt="foundation image" width="75%" style="border-radius: 10px; box-shadow: 30px 30px hsl(35,100%,50%);">
+                <div class="col about-img" style="width: 100%;">
+                    <img src="{{asset('img/about_us/donor.jpg')}}" alt="foundation image" width="75%" style="border-radius: 10px; box-shadow: 30px 30px hsl(217.2, 93.5%, 6.1%);">
                 </div>
                 <div class="col">
                     <h5 style="color:hsl(35,100%,50%);">Donor</h5>

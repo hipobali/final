@@ -25,7 +25,7 @@ class CreateUserPostsTable extends Migration
             $table->string('significance');
             $table->string('phone');
             $table->string('image');
-            $table->string('remark');
+            $table->string('remark')->default(null);
             $table->timestamps();
         });
     }

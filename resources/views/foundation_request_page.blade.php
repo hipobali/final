@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@extends('layouts.nav')
+@extends('layouts.frontend.app')
+@extends('layouts.frontend.nav')
 @section('content')
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="{{asset('css/reportForm.css')}}}">
     <link rel="stylesheet" href="{{asset('css/request.css')}}}">
 
-    <body class="f_body ">
-    <div class="container-fluid " style="padding-top: 3vw;">
+    
+    <div class="container-fluid f_body" style="padding-top: 3vw;">
         <div class="row">
             <div class="col-md-3">
                 <div class="list-group request_list position-fixed ">
@@ -24,7 +24,7 @@
                 @forelse($user_post as $user_posts)
                 <!-- Card -->
 
-                    <div class="card card2 promoting-card" style="margin-bottom: 30px; border-radius: 10px;" id="peopleInNeedCard">
+                    <div class="card shadow card2  promoting-card" id="peopleInNeedCard">
                         <!-- Card content -->
                         <div class="card-body ">
                             <div class="row">
@@ -135,7 +135,7 @@
                         </div>
                         <!-- Card image -->
                         <div class="view overlay">
-                            <img class="card-img-top rounded-0" src="{{route('get_user_post_image',[$user_posts->image])}}" alt="Card image cap">
+                            <img class="card-img-top rounded-0" src="{{url('uploads/'.$user_posts->image)}}" alt="Card image cap">
                             <a href="#!">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -173,7 +173,7 @@
                                                 <div class="modal-body">
                                                     <div class="card request_card ">
                                                         <div class="card-header">
-                                                            <img class="card-img-top rounded-0" src="{{route('get_user_post_image',[$user_posts->image])}}" alt="Card image cap">
+                                                            <img class="card-img-top rounded-0" src="{{url('uploads/'.$user_posts->image)}}" alt="Card image cap">
                                                         </div>
                                                         <div class="card-body">
                                                             <form method="post" action="{{route('foundation_request_post',Auth::user()->id)}}" enctype="multipart/form-data">
@@ -274,7 +274,6 @@
             </div>
         </div>
     </div>
-    </body>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@extends('layouts.nav')
+@extends('layouts.frontend.main')
 @section('title')
     Home
 @endsection

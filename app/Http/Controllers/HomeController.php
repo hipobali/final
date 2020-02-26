@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Foundation;
 use App\foundationPost;
-use App\Report;
 use App\userPost;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -37,6 +36,7 @@ class HomeController extends Controller
         $category=Category::all();
             return view('home',compact('user_post','foundation','foundation_post','category'));
         }
+
     public function getSearchCategory(Request $request)
     {
         $q=$request['q'];
@@ -50,6 +50,7 @@ class HomeController extends Controller
               $foundation_post=foundationPost::orderBy('id','desc')->where('f_post_category',"LIKE","%$q%")->paginate(6);
               return view('home',compact('category','foundation','foundation_post','user_post'));
     }
+    
     public function getSearchFoundation(Request $request)
     {
         $q=$request['q'];

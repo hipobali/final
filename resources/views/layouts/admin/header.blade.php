@@ -5,7 +5,7 @@
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
-        <a href="{{ url('admin/dashboard') }}">Easy Donate</a>
+        <a href="{{ url('admin/dashboard') }}" style="text-decoration:none">Easy Donate</a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>
@@ -25,7 +25,7 @@
         <ul>
 
           <li class="header-menu">
-            <span>General</span>
+           <span>General</span>
           </li>
           <li>
             <a href="{{ url('admin/dashboard') }}">

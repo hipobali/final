@@ -317,6 +317,13 @@ p {
     position: relative;
 }
 
+.donation_data_photo:hover img {
+    transform: scale(1.1) rotate(2deg);
+}
+.donation_data_photo img {
+    transition: all ease-in-out 0.5s;
+}
+
 
 
 .category_tab {

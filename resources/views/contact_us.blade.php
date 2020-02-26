@@ -24,7 +24,13 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-header text-white" style="background-color: hsl(35,100%,50%)"><i class="fa fa-envelope"></i> Contact us.
+                    @if(session()->has('success'))
+                    <div class="alert alert-success alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>{{ session()->get('success') }}</strong>
+                    </div>
+                @endif
+                    <div class="card-header text-white text-center text-uppercase" style="background-color: hsl(35,100%,50%)"><i class="fa fa-envelope"></i> Contact us.
                     </div>
                     <div class="card-body">
                         <form method="post" action="{{route('send_mail')}}">
@@ -50,7 +56,7 @@
             </div>
             <div class="col-12 col-sm-4">
                 <div class="card bg-light mb-3">
-                    <div class="card-header text-white text-uppercase" style="background-color: hsl(35,100%,50%)"><i class="fa fa-home"></i> Address</div>
+                    <div class="card-header text-center text-white text-uppercase" style="background-color: hsl(35,100%,50%)"><i class="fa fa-home"></i> Address</div>
                     <div class="card-body">
                         <p>No.22, BaYintNaung(9) Street,</p>
                         <p>Kamarkyi Road, ThinGanKwin Township,</p>

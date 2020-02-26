@@ -16,7 +16,7 @@ class peopleController extends Controller
 {
     public function getPeopleRegister()
     {
-        return view('people_register');
+        return view('auth.register.people_register');
     }
 
     public function getPeopleLogin(){

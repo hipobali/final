@@ -3,16 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Admin;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class AdminDataController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $admin_data=Admin::all();
         return view('Admin.admin_data.index',compact('admin_data'));
     }
-    public function destroy($id){
+    
+    public function destroy($id)
+    {
         Admin::find($id)->delete();
         return redirect()->back()->with(['message'=>'Admin deleted successfully !!']);
     }

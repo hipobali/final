@@ -3,26 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use App\confirmPost;
 use App\donateForm;
 use App\Foundation;
 use App\foundationPost;
 use App\Http\Requests\FoundationRegisterRequest;
-use App\People;
 use App\Report;
 use App\User;
 use App\userPost;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
 
 class FoundationController extends Controller
 {
 
     public function getFoundationRegister()
     {
-        return view('foundation_register');
+        return view('auth.register.foundation_register');
     }
 
     public function getFoundationLogin(){

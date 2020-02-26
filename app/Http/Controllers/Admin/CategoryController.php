@@ -21,15 +21,20 @@ class CategoryController extends Controller
 
         return redirect()->back()->with(['success'=>'Category created successfully !!']);
     }
+
     public function destroy($id){
         Category::find($id)->delete();
         return redirect()->back()->with(['message'=>'Category deleted successfully !!']);
     }
-    public function edit($id) {
+
+    public function edit($id) 
+    {
         $data = Category::find($id);
         return response()->json(['data' => $data]);
     }
-    public function update(Request $request,$id){
+
+    public function update(Request $request,$id)
+    {
         $category=Category::where('id',$id)->first();
         $category->category_name=$request['category_name'];
         $category->update();
