@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\People;
 use App\Category;
 use App\Foundation;
 use App\foundationPost;
+use App\User;
 use App\userPost;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -63,5 +64,19 @@ class HomeController extends Controller
         }
              $foundation_post=foundationPost::orderBy('id','desc')->where('foundation_id',"LIKE","%$q%")->paginate(6);
              return view('home',compact('category','foundation','foundation_post','user_post'));
+    }
+
+    public function profile(Request $request){
+      
+        $data=User::where('id',$request->id)->first();
+        $foundation=Foundation::where('user_id',$request->id)->first();
+        $people=People::where('user_id',$request->id)->first();
+        $userpost=userPost::where('user_id',$request->id)->first();
+        $foundationpost=foundationPost::where('foundation_id',$request->id)->first();
+
+        $fpost=foundationPost::where('foundation_id',$request->id)->get();
+        $ppost=userPost::where('user_id',$request->id)->get();
+        return view('frontend.profile',compact('data','foundation','people','userpost','foundationpost','fpost','ppost'));
+
     }
 }
