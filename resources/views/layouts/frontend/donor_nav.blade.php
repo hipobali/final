@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md nav-bg shadow-sm">
     <div class=" container-fluid">
         <a class="navbar-brand" href="{{ url('/donor/home') }}">
-            <img class="img-fluid" src="{{asset('img/logo_aa.png')}}" width="60px" height="50px">
+            <img class="img-fluid" src="{{asset('img/logo.png')}}" width="150px" height="50px">
         </a>
         <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22"
                 aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">

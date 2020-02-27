@@ -18,13 +18,17 @@ body{
 }
 
 .card-header{
-    background-color: hsl(35,100%,50%);
+    background-color: #010c1e;
     color: white;
+    padding: 30px 0;
 }
-
+.foundation_login_title{
+    margin-top: 10px;
+}
 .card-footer{
-    background-color: hsl(35,100%,50%);
+    background-color: #010c1e;
     color: white;
+    padding: 30px 30px 20px;
 }
 .btnCancel{
     background-color: white;
@@ -41,6 +45,9 @@ body{
 .card-footer .btnSave:hover{
     background-color: royalblue;
     color: white;
+}
+.foundation_login_register{
+    color: hsl(35,100%,50%);
 }
 @media only screen and (max-width: 767px){
     .left-side{

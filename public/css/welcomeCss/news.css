@@ -251,7 +251,9 @@ p {
     display: inline-block;
     position: relative;
 }
-
+.foundation_btn ,.category_btn{
+   background-color: #ff9500;
+}
 .dropdown_menu {
     position: absolute;
     display: none;
@@ -383,7 +385,14 @@ p {
     display: inline-block;
     margin: 70px 130px;
 }
-
+.pagination a{
+    border-radius: 150px;
+}
+.pagination a:hover{
+    background-color:white;
+    color: #010c1e;
+    border:1px solid #d58512;
+}
 .fs_ls,
 .previous_left {
     color: #ffffff;
@@ -467,9 +476,7 @@ footer .logo,
 .social_menu a{
     padding: 0 7px;
 }
-footer .logo{
-    left: 60px;
-}
+
 .logo_img{
     width: 25%;
     height: auto;

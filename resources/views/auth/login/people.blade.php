@@ -29,7 +29,7 @@
                 <div class="card shadow">
                     <form method="post" action="{{url('people/login')}}">
                         <div class="card-header text-center">
-                            <img src="../../../img/test.png" alt="Easy Donate Logo" width="70px" height="70px">
+                            <img src="../../../img/logo.png" alt="Easy Donate Logo" width="150px" height="60px">
                             <h4>{{__('user.login_form')}}</h4>
                         </div>
                         <div class="card-body">

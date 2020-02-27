@@ -30,7 +30,8 @@ body {
 }
 
 .card-header{
-    background-color: hsl(35,100%,50%);
+    background-color: #010c1e;
+    padding: 30px 0;
 }
 
 .image_upload{
@@ -76,8 +77,9 @@ body {
 }
 
 .card-footer{
-    background-color: hsl(35,100%,50%);
+    background-color: #010c1e;
     color: white;
+    padding: 30px 30px 20px;
 }
 
 .btnCancel:hover{
@@ -91,7 +93,7 @@ body {
 }
 
 .card-footer #login{
-    color: blue;
+    color:hsl(35,100%,50%);
 }
 
 .form-group .form-control{
