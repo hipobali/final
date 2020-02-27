@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/reportForm.css')}}}">
     <link rel="stylesheet" href="{{asset('css/request.css')}}}">
 
-    
+
     <div class="container-fluid f_body" style="padding-top: 3vw;">
         <div class="row">
             <div class="col-md-3">
@@ -247,7 +247,7 @@
                     @endforeach
             </div>
             <div class="col-md-4 mb-5">
-                <div class="card request_card position-fixed">
+                <div class="card request_card">
                     <div class="card-header text-center"><strong>Post About Donation</strong></div>
                     <div class="card-body">
                         <form method="post" action="{{route('foundation_request_post',Auth::user()->id)}}" enctype="multipart/form-data">
@@ -259,6 +259,7 @@
                             </div>
                             <div class="form-group">
                                 <select name="f_post_category" class="form-control request_textarea" placeholder="Write about donation details" required>
+                                    <option default>Write about donation details</option>
                                     @foreach($category as $categories)
                                         <option>{{$categories->category_name}}</option>
                                     @endforeach
@@ -325,7 +326,7 @@
 const $dropdownToggle = $(".dropdown-toggle");
 const $dropdownMenu = $(".dropdown-menu");
 const showClass = "show";
- 
+
 $(window).on("load resize", function() {
   if (this.matchMedia("(min-width: 768px)").matches) {
     $dropdown.hover(
