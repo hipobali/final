@@ -1,4 +1,4 @@
-@extends('layouts\frontend\main')
+@extends('layouts.frontend.main')
 <link href="{{asset('css/profile.css')}}" rel="stylesheet">
 @section('content')
 <div class="container profile">
@@ -12,7 +12,7 @@
            
                     </div>
                     @if(Auth::user()->type=='foundation')
-                <a title="{{$data->name}}" href="#" class="twPc-avatarLink name-title">
+                         <a title="{{$data->name}}" href="#" class="twPc-avatarLink name-title">
                         <img alt="{{$data->name}}" src="{{url('uploads/'.$foundation->foundation_profile)}}" class="twPc-avatarImg">
                         </a>
                     @elseif(Auth::user()->type=='people')
@@ -43,7 +43,7 @@
                                 @if(Auth::user()->type=='foundation')
 
                                 <span class="twPc-StatLabel twPc-block"><strong>Total Post</strong></span>
-                                <h5><strong>{{$foundationpost->count()}}</strong></h5>
+                                <h5><strong>{{$foundation->foundationPost->count()}}</strong></h5>
 
                                 @elseif(Auth::user()->type=='people')
 
@@ -56,13 +56,13 @@
                             <li class="twPc-ArrangeSizeFit">
                                 @if(Auth::user()->type=='foundation')
 
-                                <span class="twPc-StatLabel twPc-block"><strong>Total Post</strong></span>
-                                <h5><strong>{{$foundationpost->created_at}}</strong></h5>
+                                <span class="twPc-StatLabel twPc-block"><strong>Created Date</strong></span>
+                            <h5><strong>{{Auth::user()->created_at}}</strong></h5>
 
                                 @elseif(Auth::user()->type=='people')
-
-                                <span class="twPc-StatLabel twPc-block"><strong>Total Request Post</strong></span>
-                               <h5><strong>{{$userpost->created_at}}</strong></h5>
+                              
+                                <span class="twPc-StatLabel twPc-block"><strong>Created Date</strong></span>
+                               <h5><strong>{{Auth::user()->created_at}}</strong></h5>
                                 @endif
                               
                             </li>

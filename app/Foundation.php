@@ -18,3 +18,4 @@ class Foundation extends Model
     }
 
 }
+    
