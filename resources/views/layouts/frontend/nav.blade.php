@@ -4,11 +4,11 @@
     <div class="container-fluid">
         @if(Auth::user())
             <a class="navbar-brand" href="{{ url('/home') }}">
-                <img class="img-fluid" src="{{asset('img/logo_aa.png')}}" width="60px" height="50px">
+                <img class="img-fluid" src="{{asset('img/logo.png')}}" width="150px" height="50px">
             </a>
             @else
             <a class="navbar-brand" href="{{ url('donor/home') }}">
-                <img class="img-fluid" src="{{asset('img/logo_aa.png')}}" width="60px" height="50px">
+                <img class="img-fluid" src="{{asset('img/logo.png')}}" width="150px" height="50px">
             </a>
         @endif
         <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22"
@@ -123,11 +123,16 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+<<<<<<< HEAD
                             
                         <a class="dropdown-item" href="{{url(''.Auth::user()->type.'/profile',Auth::user()->id)}}">
+=======
+
+                        <a class="dropdown-item" href="{{url('profile',Auth::user()->id)}}">
+>>>>>>> 556470b49c690810cb44c4a933a0ecd08cabd008
                             TimeLine
                               </a>
-                                
+
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="{{url(''.Auth::user()->type.'/account',Auth::user()->id)}}">
                                 Account Setting
@@ -138,7 +143,7 @@
                                document.getElementById('logout-form').submit();">
                                 {{ __('common.logout') }}
                             </a>
-                       
+
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>

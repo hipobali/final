@@ -83,7 +83,7 @@
                     <h5>About</h5>
                     <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25"><br>
                     <a class="logo" href="/" >
-                        <img src="../../../img/logo_aa.png" width="70px" height="auto">
+                        <img src="../../../img/logo.png" width="150px" height="">
                     </a><br><br>
                     <p class="mb-0">
                         We rise by lifting others.

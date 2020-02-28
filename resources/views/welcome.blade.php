@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="overflow-x: hidden;">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
 <body>
 <div id="home">
     <div class="topnav ">
-        <a href=""><img src="{{asset('img/Logo_lumallwal.png')}}" width="50px" height=""></a>
+        <a href=""><img src="{{asset('img/logo.png')}}" width="150px" height=""></a>
         <div class="topnav-right only_pc">
             <a href="#content_news">{{ __('common.news') }}</a>
             <a href="#content_about">{{ __('common.about') }}</a>
@@ -46,8 +46,8 @@
     <button class="to-top" onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <div class="home_mv " >
         <div class="mv_content">
-            <img src="img/img_banner.png" data-src-sp="img/img_top_mv_sp.png" alt="">
-            
+            <img src="img/img_banner.png" data-src-sp="img/img_banner_sp.png" alt="">
+
             <div class="text_sec">
                 <p class="txt_mv">WE RISE BY LIFTING OTHERS</p>
                 <a class="mv_link  " href="{{route('donor_home')}}" title="">
@@ -66,10 +66,10 @@
                 <img src="../../../img/right_kanote.png" class="right_kanote">
             </div>
             <div class="inner">
-               
+
                 <!-- Thats the markup! -->
                 <!-- That looks cool. We are done!! -->
-                
+
                 <!-- 	Disregard --><a style="position: fixed; bottom: 10px; right: 10px;color:#CCC" href="https://plus.google.com/111052275277622928148?rel=me">Google+</a>
                 <p class="txt_about">{{__('welcome.about1')}}<br>{{__('welcome.about2')}}<br>{{__('welcome.about3')}}</p>
                 <p class="ttl_news" id="content_news">{{__('common.news')}}</p>
@@ -83,8 +83,8 @@
                 @foreach($foundationPost as $foundationPosts)
                 <li class="news">
                     <div class="img_news">
-                        
-                        @if(is_null($foundationPosts->user_post_id))
+
+                        @if(($foundationPosts->user_post_id)==0)
                             <img src="{{url('uploads/'.$foundationPosts->f_post_image)}}" alt="Urgent_photo" width="234" height="200">
                         @elseif($foundationPosts->user_post_id ==$foundationPosts->userPost->id)
                             <img src="{{url('uploads/'.$foundationPosts->userPost->image)}}" alt="Urgent_photo" width="234" height="200">
@@ -170,7 +170,7 @@
     <!-- end of content -->
     <footer>
         <a class="logo" href="/" >
-            <img src="../../../img/logo_aa.png" width="50px" height="">
+            <img src="../../../img/logo.png" width="150px" height="">
             <!-- <img src="img/logo.png" alt="" width="260" height="20"> -->
         </a>
         <div class="footer_menu">

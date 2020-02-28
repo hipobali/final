@@ -27,8 +27,8 @@
             <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-header text-center">
-                        <img src="../../../img/test.png" width="70px" height="70px">
-                        <h3>{{__('foundation.login_form')}}</h3>
+                        <img src="../../../img/logo.png" width="150px" height="60px">
+                        <h3 class="foundation_login_title">{{__('foundation.login_form')}}</h3>
                     </div>
                     <form method="post" action="{{url('foundation/login')}}">
                         <div class="card-body">
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                             <div class="form-group text-center">
-                                {{__('foundation.ask_account')}}  <a id="login" href="{{url('foundation/register/view')}}" style="text-decoration: none">{{__('foundation.register')}}</a>
+                                {{__('foundation.ask_account')}}  <a class="foundation_login_register" id="login" href="{{url('foundation/register/view')}}" style="text-decoration: none">{{__('foundation.register')}}</a>
                             </div>
                         </div>
                         @csrf
