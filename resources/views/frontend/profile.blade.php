@@ -43,7 +43,7 @@
                                 @if(Auth::user()->type=='foundation')
 
                                 <span class="twPc-StatLabel twPc-block"><strong>Total Post</strong></span>
-                                <h5><strong>{{$foundation->foundationPost->count()}}</strong></h5>
+                                <h5><strong>{{$fpost->count()}}</strong></h5>
 
                                 @elseif(Auth::user()->type=='people')
 
@@ -73,110 +73,84 @@
             </div>
         </div>
    
-<div class="container-fluid mt-3">
+<div class="container-fluid mt-3 mb-4">
     <div class="row">
         @if(Auth::user()->type=='foundation')
             @forelse($fpost as $aa)
-             <div class="col-md-6 col-sm-12">
+             <div class="col-md-4 col-sm-12 mb-3">
                 <div class="card promoting-card">
-
-                    <!-- Card content -->
-                    <div class="card-body d-flex flex-row">
-                  
-                      <!-- Avatar -->
+                    <div class="card-header d-flex flex-row">
                     <img src="{{url('uploads/'.$foundation->foundation_profile)}}" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
-                  
-                      <!-- Content -->
                       <div>
-                  
                         <!-- Title -->
                       <h4 class="card-title font-weight-bold mb-2">{{$data->name}}</h4>
                         <!-- Subtitle -->
                         <p class="card-text"><i class="far fa-clock pr-2"></i>{{$aa->created_at->diffForHumans()}}</p>
-                  
                       </div>
-                  
                     </div>
-                  
-                    <!-- Card image -->
-                    <div class="view overlay">
-                      <img class="card-img-top rounded-0" src="{{url('uploads/'.$aa->image)}}" alt="Card image cap">
-                      <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                      </a>
-                    </div>
-                  
-                    <!-- Card content -->
-                    <div class="card-body">
-                  
-                      <div class="collapse-content">
-                  
-                        <!-- Text -->
-                        <p class="card-text collapse" id="collapseContent">Recently, we added several exotic new dishes to our restaurant menu. They come from countries such as Mexico, Argentina, and Spain. Come to us, have some delicious wine and enjoy our juicy meals from around the world.</p>
-                        <!-- Button -->
-                        <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
-                        <i class="fas fa-share-alt text-muted float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
-                        <i class="fas fa-heart text-muted float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
-                  
+                  <div class="card-body">
+                        <div class="view overlay">
+                          <img class="card-img-top rounded-0" src="{{url('uploads/'.$aa->f_post_image)}}" alt="Card image cap">
+                        </div>
+                        <div class="collapse-content">
+                       
+                          @foreach($p_id as $pposts )
+                          @if($pposts->id == $aa->user_post_id)
+                         <p class="text-danger mt-2"> You have been confirmed this post !</p>
+                          @endif
+                          @endforeach
+
+                          <p class="mt-3">{{str_limit($aa->f_post_detail,100)}} </p>
+                      
                       </div>
+                  </div>
                   
-                    </div>
                   
                   </div>
                 </div>
          @empty<p>There is no data</p>
         @endforelse
+        
         @elseif(Auth::user()->type=='people')
         @forelse($ppost as $aa)
-        <div class="col-md-6 col-sm-12">
-           <div class="card promoting-card">
+        <div class="col-md-4 col-sm-12 mb-3">
+          <div class="card promoting-card1"  >
+              <div class="card-header d-flex flex-row">
+              <img src="{{url('uploads/'.$people->user_profile)}}" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+                <div>
+                  <!-- Title -->
+                <h4 class="card-title font-weight-bold mb-2">{{$data->name}}</h4>
+                  <!-- Subtitle -->
+                  <p class="card-text"><i class="far fa-clock pr-2"></i>{{$aa->created_at->diffForHumans()}}</p>
+                </div>
+              </div>
+            <div class="card-body">
+                  <div class="view overlay">
+                    <img class="card-img-top rounded-0" src="{{url('uploads/'.$aa->image)}}" alt="Card image cap">
+                  </div>
+                  <div class="collapse-content">
+                 
+                    @foreach($f_id as $fposts )
+                    @if($fposts->user_post_id == $aa->id)
+                   <p class="text-danger mt-2"> Foundation have been confirmed this post !</p>
+                    @endif
+                    @endforeach
 
-               <!-- Card content -->
-               <div class="card-body d-flex flex-row">
-             
-                 <!-- Avatar -->
-               <img src="{{url('uploads/'.$people->user_profile)}}" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
-             
-                 <!-- Content -->
-                 <div>
-             
-                   <!-- Title -->
-                 <h4 class="card-title font-weight-bold mb-2">{{$data->name}}</h4>
-                   <!-- Subtitle -->
-                 <p class="card-text"><i class="far fa-clock pr-2">{{$aa->created_at->diffForHumans()}}</i></p>
-             
-                 </div>
-             
-               </div>
-             
-               <!-- Card image -->
-               <div class="view overlay">
-                 <img class="card-img-top rounded-0" src="{{url('uploads/'.$aa->image)}}" alt="Card image cap">
-                 <a href="#!">
-                   <div class="mask rgba-white-slight">
-                       {{$aa->d}}
-                   </div>
-                 </a>
-               </div>
-             
-               <!-- Card content -->
-               <div class="card-body">
-             
-                 <div class="collapse-content">
-             
-                   <!-- Text -->
-                   <p class="card-text collapse" id="collapseContent">Recently, we added several exotic new dishes to our restaurant menu. They come from countries such as Mexico, Argentina, and Spain. Come to us, have some delicious wine and enjoy our juicy meals from around the world.</p>
-                   <!-- Button -->
-                   <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
-                   <i class="fas fa-share-alt text-muted float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
-                   <i class="fas fa-heart text-muted float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
-             
-                 </div>
-             
-               </div>
-             
-             </div>
-           </div>
+                    <div class="collapse-content">
+                      <p class="mt-3"><img src="../../../img/house.svg" width="5%"> &nbsp;<strong> Location :</strong> &nbsp;{{$aa->location}}</p>
+                      <p><img src="../../../img/idea.svg" width="5%"> &nbsp;<strong>  Item Requested :</strong> &nbsp;{{$aa->items_requested}}</p>
+                      <p><img src="../../../img/rich.svg" width="5%"> &nbsp;<strong>  Estimated Costs :</strong> &nbsp;{{$aa->cost}}</p>
+                      <p><img src="../../../img/star.svg" width="5%"> &nbsp;<strong> Significance of the project :</strong> &nbsp;{{$aa->significance}}</p>
+                      <p><img src="../../../img/phone.svg" width="5%"> &nbsp;<strong>  Phone :</strong> &nbsp;{{$aa->phone}}</p>
+                      <p><img src="../../../img/edit.svg" width="5%"> &nbsp;<strong>  remark :</strong> &nbsp;{{$aa->remark}}</p>
+                  </div>
+                
+                </div>
+            </div>
+            
+            
+            </div>
+          </div>
     @empty<p>There is no data</p>
    @endforelse
 @endif

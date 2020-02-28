@@ -156,7 +156,7 @@
                                                             <form class="form-horizontal">
                                                                 <div class="form-group row">
                                                                     <label class="col-4">{{__('common.email')}}</label>
-                                                                    <p class="col-8"> :&nbsp;&nbsp;Email</p>
+                                                                    <p  class="col-8"> :&nbsp;&nbsp;{{$foundation_posts->user->email}}</p>
                                                                 </div>
                                                                 <div class="form-group row">
                                                                     <label class="col-4">{{__('common.president_name')}}</label>
@@ -208,7 +208,9 @@
                                                 @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
                                                     <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="465" height="240">
                                                 @endif
-                                                <p class="text-left">  {{$foundation_posts->f_post_detail}}</p>
+                                            
+                                                <p  class="aa text-left">  {{$foundation_posts->f_post_detail}}</p>
+                                             
                                             </div>
                                             <div class="modal-footer">
                                                 <a href="{{route('get_donation_form',$foundation_posts->id)}}" type="button" class="btn btn-primary">Donate Now</a>

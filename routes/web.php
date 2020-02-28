@@ -64,6 +64,8 @@ Route::group(['prefix'=>'foundation','middleware'=>'foundation'],function (){
     Auth::routes(
         [ 'register' => false,]
     );
+    Route::get('account/{id}','HomeController@account');
+    Route::get('profile/{id}','HomeController@profile');
     Route::get('/login/view','FoundationController@getFoundationLogin')->name('foundation_login_view');
     Route::get('/request/view/','FoundationController@getFoundationRequestView')->name('foundation_request_view');
     Route::post('/request/post/{id}','FoundationController@postFoundationRequest')->name('foundation_request_post');
@@ -75,11 +77,13 @@ Route::group(['prefix'=>'people','middleware'=>'people'],function (){
     Auth::routes(
         [ 'register' => false,]
     );
+    Route::get('account/{id}','HomeController@account');
+    Route::get('profile/{id}','HomeController@profile');
     Route::get('/login/view','peopleControllerController@getPeopleLogin')->name('people_login_view');
     Route::post('/request/post/form/{id}','peopleController@postPeopleRequest')->name('user_post_form');
     Route::get('/request/post/view','peopleController@getPeoplePostView')->name('request_user_post');
   
 });
 
-Route::get('profile/{id}','HomeController@profile');
+
 

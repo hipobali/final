@@ -14,8 +14,9 @@ class CreateFoundationPostsTable extends Migration
     public function up()
     {
         Schema::create('foundation_posts', function (Blueprint $table) {
-            $table->bigIncrements('id');-
-            $table->integer('foundation_id');
+            $table->bigIncrements('id');
+            $table->bigInteger('user_id');
+            $table->bigInteger('foundation_id');
             $table->bigInteger('user_post_id')->default(null);
             $table->text('f_post_detail');
             $table->string('f_post_image')->default(null);

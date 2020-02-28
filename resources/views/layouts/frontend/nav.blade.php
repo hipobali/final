@@ -124,12 +124,12 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             
-                        <a class="dropdown-item" href="{{url('profile',Auth::user()->id)}}">
+                        <a class="dropdown-item" href="{{url(''.Auth::user()->type.'/profile',Auth::user()->id)}}">
                             TimeLine
                               </a>
                                 
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="">
+                              <a class="dropdown-item" href="{{url(''.Auth::user()->type.'/account',Auth::user()->id)}}">
                                 Account Setting
                               </a>
                               <div class="dropdown-divider"></div>

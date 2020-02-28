@@ -67,16 +67,22 @@ class HomeController extends Controller
     }
 
     public function profile(Request $request){
-      
+        $f_id=foundationPost::all();
+        $p_id=userPost::all();
         $data=User::where('id',$request->id)->first();
         $foundation=Foundation::where('user_id',$request->id)->first();
         $people=People::where('user_id',$request->id)->first();
         $userpost=userPost::where('user_id',$request->id)->first();
-        $foundationpost=foundationPost::where('foundation_id',$request->id)->first();
-
-        $fpost=foundationPost::where('foundation_id',$request->id)->get();
+        $foundationpost=foundationPost::where('user_id',$request->id)->first();
+        $fpost=foundationPost::where('user_id',$request->id)->get();
         $ppost=userPost::where('user_id',$request->id)->get();
-        return view('frontend.profile',compact('data','foundation','people','userpost','foundationpost','fpost','ppost'));
+        return view('frontend.profile',compact('data','foundation','people','userpost','foundationpost','fpost','ppost','f_id','p_id'));
 
+    }
+
+    public function account(Request $request){
+        $foundation=Foundation::where('user_id',$request->id)->first();
+        $people=People::where('user_id',$request->id)->first();
+        return view('frontend.account',compact('foundation','people'));
     }
 }
