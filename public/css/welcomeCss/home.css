@@ -14,11 +14,8 @@
     margin: 25px 15px;
     text-decoration: none;
     font-size: 18px;
-    color:
-#FFFFFF;
-
-text-shadow: -2px 6px 14px
-#7A7A7A;
+    color: #000033;
+    text-shadow: -2px 6px 14px #7A7A7A;
 }
 
 .topnav-right {
@@ -29,7 +26,7 @@ text-shadow: -2px 6px 14px
 }
 
 .topnav-right a:hover {
-    color: #dba904;
+    /*color: #dba904;*/
 }
 
 /*end of nav*/
@@ -70,27 +67,20 @@ text-shadow: -2px 6px 14px
     /*width: 570px;*/
 }
 .txt_mv {
+    font-size: 46px;
+    font-weight: bold;
     color: #FFFFFF;
-    background: #0e8dbc;
     text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15) ;
 
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 1.428;
-    background: hsl(35,100%,50%);
-    background: -webkit-linear-gradient( right, hsl(35,100%,50%) 0%, #ffffff 25%, #ffff00 50%, hsl(35,100%,50%) 100%) repeat;
-    -webkit-background-clip: text;
-    -ms-background-clip: text;
-    /*-moz-background-clip: text;*/
-    /*background-clip: text;*/
-    -webkit-text-fill-color: transparent;
-    -ms-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    text-fill-color: transparent;
-    -webkit-animation-name: masked-animation;
-    -webkit-animation-duration: 50s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
+    /*display: inline-block;*/
+    /*color:hsl(35,100%,50%);*/
+    /*text-shadow: #dba904 0 0 1px, #ffed3a 0 -1px 2px, #ffed3a 0 -3px 2px, rgba(0,0,0,0.8) 0 30px 25px;*/
+    /*transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);*/
+
+    /*display: inline-block;*/
+    /*color: #ffffff;*/
+    /*text-shadow: #CCCCCC 0 0 1px, #c9c9c9 0 -1px 2px, #bbb 0 -3px 2px, rgba(0,0,0,0.8) 0 30px 25px;*/
+    /*transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);*/
 }
 @-webkit-keyframes masked-animation {
     0% {

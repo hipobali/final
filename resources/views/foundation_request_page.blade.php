@@ -259,7 +259,6 @@
                             </div>
                             <div class="form-group">
                                 <select name="f_post_category" class="form-control request_textarea" placeholder="Write about donation details" required>
-                                    <option default>Write about donation details</option>
                                     @foreach($category as $categories)
                                         <option>{{$categories->category_name}}</option>
                                     @endforeach

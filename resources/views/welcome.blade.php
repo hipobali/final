@@ -84,7 +84,7 @@
                 <li class="news">
                     <div class="img_news">
 
-                        @if(is_null($foundationPosts->user_post_id))
+                        @if(($foundationPosts->user_post_id)==0)
                             <img src="{{url('uploads/'.$foundationPosts->f_post_image)}}" alt="Urgent_photo" width="234" height="200">
                         @elseif($foundationPosts->user_post_id ==$foundationPosts->userPost->id)
                             <img src="{{url('uploads/'.$foundationPosts->userPost->image)}}" alt="Urgent_photo" width="234" height="200">
