@@ -52,18 +52,19 @@ class LoginController extends Controller
         if ($this->guard()->validate($this->credentials($request))) {
             $user = $this->guard()->getLastAttempted();
             // User must not be Admin Account
-            if($user->type == 'admin'){
-                return redirect()
-                ->route('dashboard')
-                ->withInput($request->only($this->username(), 'remember'))
-                ->withErrors(['error_type' => 'Authentication Required']);
-            }
+        
             if ($user->type != $request->get('auth_type')){
                 $this->incrementLoginAttempts($request);
                 return redirect()
                     ->back()
                     ->withInput($request->only($this->username(), 'remember'))
                     ->withErrors(['error_type' => 'Authentication Required']);
+            }
+            if($user->type == 'admin'){
+                return redirect()
+                ->route('dashboard')
+                ->withInput($request->only($this->username(), 'remember'))
+                ->withErrors(['error_type' => 'Authentication Required']);
             }
             // Make sure the user is active
             if ($this->attemptLogin($request)) {
