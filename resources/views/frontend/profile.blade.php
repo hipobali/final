@@ -40,15 +40,17 @@
                     <div class="twPc-divStats">
                         <ul class="twPc-Arrange">
                             <li class="twPc-ArrangeSizeFit">
+
+                             
                                 @if(Auth::user()->type=='foundation')
 
                                 <span class="twPc-StatLabel twPc-block"><strong>Total Post</strong></span>
-                                <h5><strong>{{$fpost->count()}}</strong></h5>
+                                {{-- <h5><strong>{{$fpost->count()}}</strong></h5> --}}
 
                                 @elseif(Auth::user()->type=='people')
 
                                 <span class="twPc-StatLabel twPc-block"><strong>Total Request Post</strong></span>
-                               <h5><strong>{{$userpost->count()}}</strong></h5>
+                               {{-- <h5><strong>{{$userpost->count()}}</strong></h5> --}}
                                 @endif
                               
                             </li>

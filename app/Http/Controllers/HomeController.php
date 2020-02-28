@@ -67,6 +67,7 @@ class HomeController extends Controller
     }
 
     public function profile(Request $request){
+
         $f_id=foundationPost::all();
         $p_id=userPost::all();
         $data=User::where('id',$request->id)->first();

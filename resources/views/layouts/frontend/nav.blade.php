@@ -123,13 +123,8 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-<<<<<<< HEAD
                             
                         <a class="dropdown-item" href="{{url(''.Auth::user()->type.'/profile',Auth::user()->id)}}">
-=======
-
-                        <a class="dropdown-item" href="{{url('profile',Auth::user()->id)}}">
->>>>>>> 556470b49c690810cb44c4a933a0ecd08cabd008
                             TimeLine
                               </a>
 
