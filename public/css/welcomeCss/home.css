@@ -67,20 +67,12 @@
     /*width: 570px;*/
 }
 .txt_mv {
-    font-size: 46px;
+    font-size: 42px;
     font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15) ;
-
-    /*display: inline-block;*/
-    /*color:hsl(35,100%,50%);*/
-    /*text-shadow: #dba904 0 0 1px, #ffed3a 0 -1px 2px, #ffed3a 0 -3px 2px, rgba(0,0,0,0.8) 0 30px 25px;*/
-    /*transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);*/
-
-    /*display: inline-block;*/
-    /*color: #ffffff;*/
-    /*text-shadow: #CCCCCC 0 0 1px, #c9c9c9 0 -1px 2px, #bbb 0 -3px 2px, rgba(0,0,0,0.8) 0 30px 25px;*/
-    /*transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);*/
+    display: inline-block;
+    color:hsl(35,100%,50%);
+    text-shadow: #dba904 0 0 1px, #ffed3a 0 -1px 2px, #ffed3a 0 -3px 2px, rgba(0,0,0,0.8) 0 30px 25px;
+    transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);
 }
 @-webkit-keyframes masked-animation {
     0% {
@@ -111,7 +103,7 @@
     width: 400px;
     display: inline-block;
     padding: 18px 0;
-    margin-top: 280px;
+    margin-top: 260px;
     background: url('../../img/icon_mv_link.png') no-repeat center right 60px rgba(208, 199, 199, 0.6);
     -webkit-background-size: 20px auto;
     -o-background-size: 20px auto;
