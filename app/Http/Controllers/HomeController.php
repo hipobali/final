@@ -6,6 +6,7 @@ use App\Category;
 use App\Foundation;
 use App\foundationPost;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 use App\userPost;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -86,4 +87,18 @@ class HomeController extends Controller
         $people=People::where('user_id',$request->id)->first();
         return view('frontend.account',compact('foundation','people'));
     }
+
+    public function accountUpdate(Request $request){
+        $user=User::where('id',$request->id)->first();
+        $password=Hash::make($request->old_password);
+       if($password==$user->password){
+        $user->name=$request['name'];
+        $user->email=$request['email'];
+        $user->password=Hash::make($request['password']);
+        $user->update();
+        return redirect()->back()->with(['message'=>'Your account have been updated !!']);
+       }else{
+        return redirect()->back()->with(['message'=>'Account update unsuccessful']);
+    }
+}
 }
