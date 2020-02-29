@@ -4,13 +4,7 @@
     <div class="page-wrapper chiller-theme toggled">
         <!-- sidebar-wrapper  -->
         <main class="page-content">
-            <div class="container" id="back_to">
-                <div class="row">
-                    <div class="col-md-12">
-                        <a href="{{url('/')}}" target="_blank">BACK TO HOME</a>
-                    </div>
-                </div>
-            </div>
+           
             @if(session()->has('message'))
                 <div class="alert alert-success alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -39,7 +33,7 @@
                          <td>{{ $key+1 }}</td>
                          <td class="text-center">{{$data->foundation->foundation_name}}</td>
                       
-                         <td class="text-center">{{$data->f_post_detail}}</td>
+                         <td class="text-center">{{str_limit($data->f_post_detail,50)}}</td>
                          <td class="text-center">
                             <img src="{{url('uploads/'.$data->f_post_image)}}" class="img-fluid"></td>
                          <td class="text-center">{{$data->f_post_category}}</td>
@@ -92,20 +86,6 @@
                 var link = window.location.href + '/' + id;
                 $("#delete_form").attr("action",link);
                 $('#deleteModal').modal('show');
-            });
-
-            $(document).on("click","#show_edit_btn",function(){
-                var id = $(this).attr('data-id');
-                $.ajax({
-                    type:'GET',
-                    url:'category/'+id+'/edit',
-                    success:function(data){
-                        $('#category_name').val(data.data.category_name);
-                    }
-                });
-                var link = window.location.href + '/' + id;
-                $("#edit_form").attr("action",link);
-                $('#editModal').modal('show');
             });
 
             function RemoveLastDirectoryPartOf(the_url)

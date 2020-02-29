@@ -16,6 +16,7 @@ class Foundation extends Model
     public function foundationPost(){
         return $this->hasMany('App\foundationPost','id');
     }
+  
 
 }
     

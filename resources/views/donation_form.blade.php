@@ -72,7 +72,7 @@
                     <label for="donate_foundation">Which foundation you want to donate?</label>
                             <select id="aa" name="donate_foundation" class="form-control request_textarea"  required  value="{{old('donate_foundation')}}">
                        @foreach($foundation as $foundations)
-                           <option id="aa" value="{{$foundations->foundation_name}}">{{$foundations->foundation_name}}</option>
+                           <option id="aa" value="{{$foundations->user_id}}">{{$foundations->foundation_name}}</option>
                      @endforeach
                     </select>
                 </div>

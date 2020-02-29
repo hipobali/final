@@ -12,7 +12,7 @@
       </div>
       <div class="sidebar-header">
         <div class="user-pic">
-          <img class="img-responsive img-rounded" src="{{ url('img/logo_aa.png') }}"
+          <img class=" img-rounded " width="50" height="50"  src="{{ url('img/logo.png') }}"
             alt="User picture">
         </div>
         <div class="user-info">

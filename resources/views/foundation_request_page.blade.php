@@ -224,7 +224,7 @@
                     @endforelse
 
                     @foreach($donateForm as $donateForms)
-                        @if($donateForms->donate_foundation==Auth::user()->name)
+                        @if($donateForms->donate_foundation==Auth::user()->id)
                             <div class="card donor_card card1 post_card" style="margin-bottom: 30px; border-radius: 10px;">
                                 <div class="card-header" >
                                     <img src="../../../img/donate.png" style="width: 50px;height: 50px;" class="rounded-circle" >  Donor

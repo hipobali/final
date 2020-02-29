@@ -88,20 +88,6 @@
                 $('#deleteModal').modal('show');
             });
 
-            $(document).on("click","#show_edit_btn",function(){
-                var id = $(this).attr('data-id');
-                $.ajax({
-                    type:'GET',
-                    url:'category/'+id+'/edit',
-                    success:function(data){
-                        $('#category_name').val(data.data.category_name);
-                    }
-                });
-                var link = window.location.href + '/' + id;
-                $("#edit_form").attr("action",link);
-                $('#editModal').modal('show');
-            });
-
             function RemoveLastDirectoryPartOf(the_url)
             {
                 var the_arr = the_url.split('/');

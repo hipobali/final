@@ -4,13 +4,7 @@
     <div class="page-wrapper chiller-theme toggled">
         <!-- sidebar-wrapper  -->
         <main class="page-content">
-            <div class="container" id="back_to">
-                <div class="row">
-                    <div class="col-md-12">
-                        <a href="{{url('/')}}" target="_blank">BACK TO HOME</a>
-                    </div>
-                </div>
-            </div>
+           
             @if(session()->has('message'))
                 <div class="alert alert-success alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -32,6 +26,7 @@
                             <th>Donate Foundation</th>
                             <th>Donor Donation Option</th>
                             <th>Donate Date</th>
+                            <th>Donate Amount</th>
                             <th>Created Date</th>
                             <th>Updated Date</th>
                             <th>Actions</th>
@@ -41,7 +36,7 @@
                         @forelse($donate_form as $key => $data)
                         <tr>
                             <td>{{ $key+1 }}</td>
-``                         <td class="text-center">{{$data->donor_name}}</td>
+                             <td class="text-center">{{$data->donor_name}}</td>
                             <td class="text-center">{{$data->donor_ph_no}}</td>
                             <td class="text-center">{{$data->donor_location}}</td>
                             <td class="text-center">{{$data->donor_address}}</td>
@@ -52,10 +47,10 @@
                             <td class="text-center">{{$data->donor_amount}}</td>
                             <td class="text-center">{{$data->created_at}}</td>
                             <td class="text-center">{{$data->updated_at}}</td>
-                                <td><i class="fas fa-trash-alt delete_i" data-id="{{ $data->id }}" id="show_btn"></i></td>
+                                <td ><i class="fas fa-trash-alt delete_i" data-id="{{ $data->id }}" id="show_btn"></i></td>
                         </tr>
                        @empty
-                           <tr><td colspan="16" class="text-center"> There is no data </td></tr>
+                           <tr><td colspan="13" class="text-center"> There is no data </td></tr>
                         @endforelse
                         </tbody>
                     </table>
@@ -99,20 +94,6 @@
                 var link = window.location.href + '/' + id;
                 $("#delete_form").attr("action",link);
                 $('#deleteModal').modal('show');
-            });
-
-            $(document).on("click","#show_edit_btn",function(){
-                var id = $(this).attr('data-id');
-                $.ajax({
-                    type:'GET',
-                    url:'category/'+id+'/edit',
-                    success:function(data){
-                        $('#category_name').val(data.data.category_name);
-                    }
-                });
-                var link = window.location.href + '/' + id;
-                $("#edit_form").attr("action",link);
-                $('#editModal').modal('show');
             });
 
             function RemoveLastDirectoryPartOf(the_url)

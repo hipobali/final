@@ -91,7 +91,7 @@ class donorController extends Controller
 
     public function getAboutUs()
     {
-            return view('about_us');
+            return view('frontend.about_us');
     }
 
     public function getDonateCancle()
