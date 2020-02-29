@@ -6,6 +6,7 @@ use App\Category;
 use App\Foundation;
 use App\foundationPost;
 use App\User;
+use Auth;
 use Illuminate\Support\Facades\Hash;
 use App\userPost;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -89,16 +90,27 @@ class HomeController extends Controller
     }
 
     public function accountUpdate(Request $request){
-        $user=User::where('id',$request->id)->first();
-        $password=Hash::make($request->old_password);
-       if($password==$user->password){
-        $user->name=$request['name'];
-        $user->email=$request['email'];
-        $user->password=Hash::make($request['password']);
-        $user->update();
-        return redirect()->back()->with(['message'=>'Your account have been updated !!']);
-       }else{
-        return redirect()->back()->with(['message'=>'Account update unsuccessful']);
+
+        $user = Auth::user();
+        $user->name = $request->name;
+        if($request->password && $request->old_password)
+        {
+            if(Hash::check($request->old_password, $user->password))
+            {
+                if($request->password === $request->confirm_password)
+                {
+                    if(strlen($request->password) > 3)
+                    {
+                        $user->password = bcrypt($request->password);
+                    }
+                    else return redirect()->back()->with('error', 'Your password is less than 4 characters!');
+                }
+                else return redirect()->back()->with('error', 'Your password don\'t match!');
+            }
+            else return redirect()->back()->with('error', 'Your old password isn\'t correct');
+        }
+        $user->save();
+        return redirect()->back()->with('message', 'Successfully Saved Profile!');
     }
 }
-}
+

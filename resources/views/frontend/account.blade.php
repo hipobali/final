@@ -2,15 +2,24 @@
 <link href="{{asset('css/profile.css')}}" rel="stylesheet">
 @section('content')
 <link rel="stylesheet" href="{{asset('css/account.css')}}"
-
-
 <div class="container ">
-
     <div class="row">
         <div class="col-md-8 offset-2  mt-5 mb-5">
             <div class="text-center">
                 @if(session('message'))
-                    {{session('message')}}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{session('message')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                    @elseif(session('error'))
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                       {{session('error')}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
                 @endif
             <label class="mt-5 "><h2 >Update Account</h2></label>
             <div class="col-md-8 offset-2">
@@ -22,23 +31,19 @@
                 @csrf
                 <div class="form-group">
                     <label class="control-label"><h5>Name</h5></label>
-                <input type="text" name="name" value="{{Auth::user()->name}}" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label class="control-label"><h5>Email</h5></label>
-                <input type="text" name="name" value="{{Auth::user()->email}}" class="form-control">
+                    <input type="text" class="form-control" placeholder="Name" name="name" required="true" id="name" value="{{ Auth::user()->name }}"/>
                 </div>
                 <div class="form-group">
                     <label class="control-label"><h5>Old Password</h5></label>
-                <input type="text" name="name"  class="form-control">
+                    <input type="password" class="form-control" placeholder="Old Password" name="old_password"/>
                 </div>
                 <div class="form-group">
                     <label class="control-label"><h5>New Password</h5></label>
-                <input type="text" name="name"  class="form-control">
+                <input type="password" name="password"  class="form-control">
                 </div>
                 <div class="form-group">
                     <label class="control-label"><h5>Confirm Password</h5></label>
-                <input type="text" name="name"  class="form-control">
+                    <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password"/>
                 </div>
                 <div class="form-group">
                    <button type="submit" class="form-control btn btn-dark" >Update </button> 

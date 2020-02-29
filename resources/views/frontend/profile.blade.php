@@ -40,32 +40,21 @@
                     <div class="twPc-divStats">
                         <ul class="twPc-Arrange">
                             <li class="twPc-ArrangeSizeFit">
+                              @if(Auth::user()->type=='foundation')
 
-                             
-                                @if(Auth::user()->type=='foundation')
+                              <span class="twPc-StatLabel twPc-block"><strong>Created Date</strong></span>
+                          <h5><strong>{{Auth::user()->created_at}}</strong></h5>
 
-                                <span class="twPc-StatLabel twPc-block"><strong>Total Post</strong></span>
-                                {{-- <h5><strong>{{$fpost->count()}}</strong></h5> --}}
-
-                                @elseif(Auth::user()->type=='people')
-
-                                <span class="twPc-StatLabel twPc-block"><strong>Total Request Post</strong></span>
-                               {{-- <h5><strong>{{$userpost->count()}}</strong></h5> --}}
-                                @endif
-                              
+                              @elseif(Auth::user()->type=='people')
+                            
+                              <span class="twPc-StatLabel twPc-block"><strong>Created Date</strong></span>
+                             <h5><strong>{{Auth::user()->created_at}}</strong></h5>
+                              @endif
+                                       
                             </li>
 
                             <li class="twPc-ArrangeSizeFit">
-                                @if(Auth::user()->type=='foundation')
-
-                                <span class="twPc-StatLabel twPc-block"><strong>Created Date</strong></span>
-                            <h5><strong>{{Auth::user()->created_at}}</strong></h5>
-
-                                @elseif(Auth::user()->type=='people')
-                              
-                                <span class="twPc-StatLabel twPc-block"><strong>Created Date</strong></span>
-                               <h5><strong>{{Auth::user()->created_at}}</strong></h5>
-                                @endif
+                          
                               
                             </li>
                           
@@ -85,7 +74,7 @@
                     <img src="{{url('uploads/'.$foundation->foundation_profile)}}" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
                       <div>
                         <!-- Title -->
-                      <h4 class="card-title font-weight-bold mb-2">{{$data->name}}</h4>
+                      <h4 class="card-title font-weight-bold mb-2 mt-3">{{$data->name}}</h4>
                         <!-- Subtitle -->
                         <p class="card-text"><i class="far fa-clock pr-2"></i>{{$aa->created_at->diffForHumans()}}</p>
                       </div>
@@ -98,7 +87,7 @@
                        
                           @foreach($p_id as $pposts )
                           @if($pposts->id == $aa->user_post_id)
-                         <p class="text-danger mt-2"> You have been confirmed this post !</p>
+                         <p class="text-success mt-2"> You have been confirmed this post !</p>
                           @endif
                           @endforeach
 
@@ -134,7 +123,7 @@
                  
                     @foreach($f_id as $fposts )
                     @if($fposts->user_post_id == $aa->id)
-                   <p class="text-danger mt-2"> Foundation have been confirmed this post !</p>
+                   <p class="text-success mt-2"> Foundation have been confirmed this post !</p>
                     @endif
                     @endforeach
 

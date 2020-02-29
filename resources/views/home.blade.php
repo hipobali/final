@@ -106,7 +106,7 @@
                         @foreach($foundation_post as $foundation_posts)
                             <div class="donation_data ">
                                 <div class="donation_data_photo">
-                                    @if($foundation_posts->user_post_id==0)
+                                    @if(is_null($foundation_posts->user_post_id))
                                         <img src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="260" height="240">
                                     @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
                                         <img src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="260" height="240">
