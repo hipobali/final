@@ -4,3 +4,8 @@ form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, a
 header, hgroup, menu, nav, section, time, mark, audio, video, a, p{
     font-family: Roboto,'Padauk',sans-serif;
 }
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #212529;
+}
