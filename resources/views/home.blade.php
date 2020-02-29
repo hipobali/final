@@ -197,7 +197,7 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                @if($foundation_posts->user_post_id==0)
+                                                @if(is_null($foundation_posts->user_post_id))
                                                     <img class="mb-4" src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="465" height="240">
                                                 @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
                                                     <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="465" height="240">
