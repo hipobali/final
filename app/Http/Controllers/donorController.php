@@ -81,12 +81,12 @@ class donorController extends Controller
 
     public function getContactUs()
     {
-          return view('contact_us');
+          return view('frontend.contact_us');
     }
 
     public function getTermsAndConditions()
     {
-            return view('terms_and_conditions');
+            return view('frontend.terms_and_conditions');
     }
 
     public function getAboutUs()

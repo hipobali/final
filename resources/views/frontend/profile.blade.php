@@ -3,7 +3,7 @@
 @section('content')
 <div class="container profile">
     <div class="row">
-        <div class="col-md-12 col-sm-12 mt-4">
+        <div class="col-md-12 col-sm-12 mt-5">
             <div class="twPc-div">
                 <a class="twPc-bg twPc-block"></a>
             
