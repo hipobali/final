@@ -1,4 +1,8 @@
-@extends('layouts.frontend.main')
+@extends('layouts.frontend.app')
+@include('layouts.frontend.nav')
+@section('extra_css')
+    <link href="{{asset('css/news.css')}}" rel="stylesheet">
+@endsection
 @section('content')
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +30,7 @@
 
         <div class="urgent">
             <div class="urgent_ttl">
-                <h2 class="urgent_ttl_txt">{{__('common.urgent_need')}}</h2>
+                <h2 class="title_weight urgent_ttl_txt">{{__('common.urgent_need')}}</h2>
             </div>
             <div class="urgent_post_section">
 
@@ -107,7 +111,7 @@
         <div class="donation">
 
             <div class="donation_ttl">
-                <h2 class="donation_ttl_txt">{{__('common.donation_list')}}</h2>
+                <h2 class="title_weight donation_ttl_txt">{{__('common.donation_list')}}</h2>
             </div>
 
             <div class="inner">
@@ -255,9 +259,9 @@
                                                 @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
                                                     <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="465" height="240">
                                                 @endif
-                                            
+
                                                 <p  class="aa text-left">  {{$foundation_posts->f_post_detail}}</p>
-                                             
+
                                             </div>
 
                                             <div class="modal-footer">
