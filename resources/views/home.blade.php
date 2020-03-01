@@ -61,7 +61,7 @@
                                                         <div class="card testimonial-card" style="background-color:lightgoldenrodyellow">
                                                             <!-- Background color -->
                                                             <div class="card-up indigo lighten-1"></div>
-    
+
                                                             <!-- Avatar -->
                                                             <div class="avatar mx-auto white mt-3">
                                                                 <img  src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}" class="rounded-circle" height="auto" width="200" alt="woman avatar">
@@ -94,7 +94,7 @@
                                                                     </div>
                                                                 </form>
                                                             </div>
-    
+
                                                         </div>
                                                         <!-- Card -->
                                                     </div>
@@ -135,7 +135,7 @@
                                                     @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
                                                     <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="465" height="240">
                                                     @endif
-                                                       
+
                                                         <p class="text-left">  {{$foundation_posts->f_post_detail}}</p>
                                                     </div>
                                                     <div class="modal-footer">
@@ -263,7 +263,7 @@
                                 <div class="modal fade" id="exampleModall{{$foundation_posts->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
-                                            <div class="modal-header">   
+                                            <div class="modal-header">
                                                 <img class="foundation_people" src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
                                                 <h4 class="ml-2 mt-3" >{{$foundation_posts->foundation->foundation_name}}</h4>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -272,9 +272,9 @@
                                             </div>
                                             <div class="modal-body">
                                                 @if(is_null($foundation_posts->user_post_id))
-                                                    <img class="mb-4" src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="465" height="240">
+                                                    <img class="detail_img mb-4" src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="465" height="240">
                                                 @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
-                                                    <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="465" height="240">
+                                                    <img class="detail_img mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="465" height="240">
                                                 @endif
                                                 <p class="text-left">  {{$foundation_posts->f_post_detail}}</p>
                                             </div>

@@ -24,7 +24,6 @@
     <link href="{{asset('css/input_file.css')}}" rel="stylesheet">
     <link href="{{asset('css/all.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Padauk:400,700&display=swap" rel="stylesheet">
-    <link href="{{asset('css/foundation_signUp.css')}}" rel="stylesheet">
 
 
     <link rel="stylesheet" type="text/css" href="{{asset('css/welcomeCss/slick-theme.css')}}">
