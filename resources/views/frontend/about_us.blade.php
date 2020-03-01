@@ -1,4 +1,5 @@
-@extends('layouts.frontend.main')
+@extends('layouts.frontend.app')
+@include('layouts.frontend.nav')
 
 @section('content')
     <title>About Us</title>
@@ -24,7 +25,7 @@
     <!-- javascript link for bootstrap -->
 
     <!-- container -->
-    <div class="container-fluid">
+    <div class="container-fluid mt-5">
 
         <!-- purpose -->
         <div class="purpose">
