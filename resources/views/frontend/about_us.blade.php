@@ -30,9 +30,9 @@
         <!-- purpose -->
         <div class="purpose">
             <div class="about_title mt-5">
-                <img src="../../../img/left_kanote.png" class="left_kanote mt-5">
+                <img src="{{asset('img/left_kanote.png')}}" class="left_kanote mt-5">
                 <h4 class="about_title_text mt-5" style="color: hsl(35,100%,50%)">OUR MAIN PURPOSE</h4>
-                <img src="../../../img/right_kanote.png" class="right_kanote mt-5">
+                <img src="{{asset('img/right_kanote.png')}}" class="right_kanote mt-5">
             </div>
 {{--            <h4 style="color: hsl(35,100%,50%)">OUR MAIN PURPOSE</h4>--}}
             <p>
@@ -169,7 +169,7 @@
     <!-- footer -->
     <footer>
         <a style="text-decoration:none;" class="logo" href="/">
-            <img class="logo_img" src="{{asset('img/logo.png')}}" alt="" style="width: 150px;">
+            <img class="logo_img" src="{{asset('img/logo.png')}}" alt="" >
         </a>
         <div class="footer_menu">
         <a style="text-decoration:none;" href="{{url('donor/home')}}">News</a><a style="text-decoration:none;" href="{{url('User/about_us')}}">About</a><a style="text-decoration:none;" href="{{url('User/ContactUs')}}">Contact</a><a style="text-decoration:none;" href="{{url('User/termsandconditions')}}">Terms and Conditions</a>

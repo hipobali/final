@@ -26,25 +26,11 @@
             <a href="#content_about">{{ __('common.about') }}</a>
             <a href="#content_contact">{{ __('common.contact') }}</a>
             <a href="#content_terms">{{ __('common.terms_and_conditions') }}</a>
-            <a href="{{url('locale/en')}}" style="margin-right: 0"><img src="../../../img/flagEng.png" width="30px" height="30px">Eng</a>
-            <a href="{{url('locale/mm')}}" style="margin-right: 0"><img src="../../../img/flagMyanmar.png" width="30px" height="30px">မြန်မာ  &nbsp;</a>
+            <a href="{{url('locale/en')}}" style="margin-right: 0"><img src="{{asset('img/flagEng.png')}}" width="30px" height="30px">Eng</a>
+            <a href="{{url('locale/mm')}}" style="margin-right: 0"><img src="{{asset('img/flagMyanmar.png')}}" width="30px" height="30px">မြန်မာ  &nbsp;</a>
 
         </div>
-{{--        <div class="responsive_nav only_sp">--}}
-{{--            <div class="btn_menu">--}}
-{{--                <div class="icon_menu">--}}
-{{--                    <span></span>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="responsive_content only_sp">--}}
-{{--                <a href="/">{{ __('common.news') }}</a>--}}
-{{--                <a href="#content_about">{{ __('common.about') }}</a>--}}
-{{--                <a href="#content_contact">{{ __('common.contact') }}</a>--}}
-{{--                <a href="#content_terms">{{ __('common.terms_and_conditions') }}</a>--}}
-{{--                <a href="{{url('locale/en')}}" style="padding-right: 0;margin-right: 0">English &nbsp;/</a>--}}
-{{--                <a href="{{url('locale/mm')}}">မြန်မာ</a>--}}
-{{--            </div>--}}
-{{--        </div>--}}
+
     </div>
     <button class="to-top" onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <div class="home_mv " >
@@ -64,9 +50,9 @@
     <div class="content">
         <div class="content_about" id="content_about">
             <div class="about_title">
-                <img src="../../../img/left_kanote.png" class="left_kanote">
+                <img src="{{asset('img/left_kanote.png')}}" class="left_kanote">
                 <h3 class="title_text">About</h3>
-                <img src="../../../img/right_kanote.png" class="right_kanote">
+                <img src="{{asset('img/right_kanote.png')}}" class="right_kanote">
             </div>
             <div class="inner">
 
@@ -104,9 +90,9 @@
         <!-- end of about -->
         <div class="content_contact" id="content_contact">
             <div class="contact_title">
-                <img src="../../../img/left_kanote.png" class="left_kanote">
+                <img src="asset('img/left_kanote.png')}}" class="left_kanote">
                 <h3 class="title_text">Contact</h3>
-                <img src="../../../img/right_kanote.png" class="right_kanote">
+                <img src="{{asset('img/right_kanote.png')}}" class="right_kanote">
             </div>
             <div class="contact inner">
                 <div class="address">
@@ -138,9 +124,9 @@
         <!-- end of contact -->
         <div class="content_terms" id="content_terms">
             <div class="terms_title">
-                <img src="../../../img/left_kanote.png" class="left_kanote">
-                <h3 class="title_text">Terms and Conditions</h3>
-                <img src="../../../img/right_kanote.png" class="right_kanote">
+                <img src="{{asset('img/left_kanote.png')}}" class="left_kanote">
+                <h3 class="title_text">Terms and Policies</h3>
+                <img src="{{asset('img/right_kanote.png')}}" class="right_kanote">
             </div>
             <div class="inner">
                 <p class="txt_terms">{{__('term_condition.paragraph1')}}<br>{{__('term_condition.paragraph2')}}</p>
@@ -172,7 +158,7 @@
     <!-- end of content -->
     <footer>
         <a class="logo" href="/" >
-            <img src="../../../img/logo.png" width="150px" height="">
+            <img src="{{asset('img/logo.png')}}" width="150px" height="">
             <!-- <img src="img/logo.png" alt="" width="260" height="20"> -->
         </a>
         <div class="footer_menu">

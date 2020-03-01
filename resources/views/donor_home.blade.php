@@ -83,7 +83,7 @@
                                                     </div>
 
                                                     <div class="modal-body">
-                                                        <img class="detail_img mb-4" src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="465" height="240">
+                                                        <img class="detail_img mb-4" src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="100%" height="auto">
                                                         <p class="text-left">  {{$foundation_posts->f_post_detail}}</p>
                                                     </div>
 
@@ -251,9 +251,9 @@
                                             <div class="modal-body">
 
                                                 @if($foundation_posts->user_post_id==0)
-                                                    <img class="mb-4" src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="465" height="240">
+                                                    <img class="mb-4" src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="100%" height="auto">
                                                 @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
-                                                    <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="465" height="240">
+                                                    <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="100%" height="auto">
                                                 @endif
 
                                                 <p  class="aa text-left">  {{$foundation_posts->f_post_detail}}</p>
@@ -378,8 +378,8 @@
                         }
                     }
                 ],
-                prevArrow: "<img class='a-left control-c prev slick-prev' src='../../../img/news_post/slider_arrow_left.png' width='48' height='48'>",
-                nextArrow: "<img class='a-right control-c next slick-next' src='../../../img/news_post/slider_arrow_right.png'>"
+                prevArrow: "<img class='a-left control-c prev slick-prev'  src='{{asset('img/news_post/slider_arrow_left.png')}}' width='48' height='48'>",
+                nextArrow: "<img class='a-right control-c next slick-next' src='{{asset('img/news_post/slider_arrow_right.png')}}'>"
             });
         });
     </script>

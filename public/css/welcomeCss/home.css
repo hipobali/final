@@ -68,7 +68,7 @@
 }
 .text_sec{
     position: absolute;
-    bottom: 55px;
+    bottom: 112px;
     left: 50%;
     margin: 0;
     -webkit-transform: translateX(-50%);
@@ -387,6 +387,7 @@ footer .logo,
         width: 58.163vw;
     }
     .txt_mv{
+        bottom: 12.653vw;
         font-size: 4.082vw;
     }
     .mv_link{
@@ -558,6 +559,22 @@ footer .logo,
 
 }
 @media only screen and (max-width: 768px){
+
+footer .logo img{
+    width:1rem;
+    height: auto;
+}
+    .topnav a{
+        float: left;
+        color: #ffffff;
+        text-align: center;
+        margin: 16px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #000033;
+        text-shadow: -2px 6px 14px #7A7A7A;
+    }
+
 
     /*nav bar*/
     .topnav {

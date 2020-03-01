@@ -16,7 +16,7 @@
             <div class="animated-icon3"><span></span><span></span><span></span></div>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent22">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent22">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
 

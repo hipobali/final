@@ -5,7 +5,9 @@
     .about-img img {
         transition: all ease-in-out 0.5s;
     }
-
+footer .logo .logo_img{
+   width: 150px;
+}
 /*PURPOSE */
 body
 {
@@ -186,6 +188,8 @@ footer .logo,
 footer .logo{
     left: 60px;
 }
+
+
 .logo_img{
     width: 25%;
     height: auto;
@@ -197,6 +201,9 @@ footer .logo{
 }
 
 @media only screen and (max-width:768px) {
+
+
+    
     .hide_img{
         display: none;
     }
@@ -204,6 +211,10 @@ footer .logo{
         height: auto;
         width: 100%;
         padding: 10vw 0 11vw 0;
+    }
+    footer .logo img{
+        width:1rem;
+        height: auto;
     }
     footer .logo{
         top: 20%;

@@ -10,9 +10,9 @@
         <div class="row">
             <div class="col-md-6 left-side">
                 <div class="text_point ">
-                    <img src="../../../img/left_kanote.png" class="left_kanote" style="vertical-align: middle">
+                    <img src="{{asset('img/left_kanote.png')}}" class="left_kanote" style="vertical-align: middle">
                     <h3 style="color: hsl(35,100%,50%); margin-top: 20%">&nbsp;{{__('user.register_account')}}&nbsp;</h3>
-                    <img src="../../../img/right_kanote.png" class="right_kanote" style="vertical-align: middle">
+                    <img src="{{asset('img/right_kanote.png')}}" class="right_kanote" style="vertical-align: middle">
                 </div>
                 <p style="margin-top: 50px;"><strong>
                         "{{__('user.reg_quote1')}}<br>
@@ -25,14 +25,14 @@
                     <br>
                     <i><b>--{{__('user.reg_writer')}}--</b></i>
                 </p>
-                <img class="pp img-fluid" src="../../../img/pp.png" style="margin-top: 100px;">
+                <img class="pp img-fluid" src="{{asset('img/pp.png')}}" style="margin-top: 100px;">
             </div>
             <div class="col-md-6 mb-5">
                 <div class="card box-shadow ">
                     <form method="post" action="{{route('people_register')}}" enctype="multipart/form-data">
                         <div class="card-header text-center">
                             <div class="image_upload row">
-                                <img class="img_before_user_profile img-fluid rounded-circle" src="../../../img/camera_user.png">
+                                <img class="img_before_user_profile img-fluid rounded-circle" src="{{asset('img/camera_user.png')}}">
                                 <div class="upload_text">
                                     <label class="btn">
                                         <div class="text">{{__('user.upload')}}<br>{{__('user.profile')}}<br>{{__('user.picture')}}</div>

@@ -10,5 +10,6 @@ header, hgroup, menu, nav, section, time, mark, audio, video, a, p{
     background-color: #212529;
 }
 html{
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y:auto;
 }

@@ -11,9 +11,9 @@
         <div class="row " style="margin-top:50px;">
             <div class="col-md-6 text-center left-side">
                 <div class="text_point ">
-                    <img src="../../../img/left_kanote.png" class="left_kanote" style="vertical-align: middle">
+                    <img src="{{asset('img/left_kanote.png')}}" class="left_kanote" style="vertical-align: middle">
                     <h3 style="color: hsl(35,100%,50%)">&nbsp;{{__('user.login_to_account')}}&nbsp;</h3>
-                    <img src="../../../img/right_kanote.png" class="right_kanote" style="vertical-align: middle">
+                    <img src="{{asset('img/right_kanote.png')}}" class="right_kanote" style="vertical-align: middle">
                 </div>
                 <p style="margin-top: 50px;"><strong>
                         "{{__('user.login_quote1')}}<br>
@@ -23,13 +23,13 @@
                     <br>
                     <i><b>--{{__('user.login_writer')}}--</b></i>
                 </p>
-                <img class="img-fluid" src="../../../img/community2.png" width="200px" style="margin-top: 40px">
+                <img class="img-fluid" src="{{asset('img/community2.png')}}" width="200px" style="margin-top: 40px">
             </div>
             <div class="col-md-6">
                 <div class="card shadow">
                     <form method="post" action="{{url('people/login')}}">
                         <div class="card-header text-center">
-                            <img src="../../../img/logo.png" alt="Easy Donate Logo" width="150px" height="60px">
+                            <img src="{{asset('img/logo.png')}}" alt="Easy Donate Logo" width="150px" height="60px">
                             <h4>{{__('user.login_form')}}</h4>
                         </div>
                         <div class="card-body">
