@@ -159,16 +159,12 @@
                         <div class="card-footer">
                             <div class="form-group row">
                                 <div class="col-6">
-                                    <a  href="{{url('donor/home')}}" class="btn form-control btn_register2">{{__('foundation.reg_cancel')}}</a>
+                                    <a  href="{{route('dashboard')}}" class="btn form-control btn_register2">{{__('foundation.reg_cancel')}}</a>
                                 </div>
                                 <div class="col-6">
                                     <button type="submit" class="btn_register1 form-control" >{{__('foundation.reg_save')}}</button>
                                 </div>
                             </div>
-                            <div class="account_login_link">
-                                {{__('foundation.have_account')}} <a href="{{url('foundation/login')}}" style="text-decoration: none">{{__('foundation.login')}}</a>
-                            </div>
-
                         </div>
                         @csrf
                     </form>

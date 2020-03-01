@@ -9,7 +9,7 @@ Route::group(['prefix'=>'admin','middleware'=>'admin'],function (){
     });
     Route::get('/logout', 'adminController@logout')->name('logout');
     Route::get('/dashboard','adminController@index')->name('dashboard');
-
+    Route::get('foundation/register/view','FoundationController@getFoundationRegister')->name('foundation_register_view');
     Route::post('/register/post','adminController@postAdminRegister')->name('admin_register');
 
     Route::resource('category','Admin\CategoryController');
@@ -23,3 +23,4 @@ Route::group(['prefix'=>'admin','middleware'=>'admin'],function (){
     Route::resource('user_data','Admin\UserController');
 
 });
+Route::get('foundation/register/view','FoundationController@getFoundationRegister')->name('foundation_register_view');

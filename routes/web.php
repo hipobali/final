@@ -23,7 +23,7 @@ Route::group(['middleware'=>['auth']],function (){
 Route::get('/','welcomeController@getWelcome')->name('/');
 
 //foundation
-Route::get('foundation/register/view','FoundationController@getFoundationRegister')->name('foundation_register_view');
+
 Route::post('foundation/register/post','FoundationController@postFoundationRegister')->name('foundation_register');
 
 //people

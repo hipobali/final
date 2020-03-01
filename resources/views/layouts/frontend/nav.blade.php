@@ -54,8 +54,6 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item " href="{{route('people_register_view')}}">{{__('common.user_signup')}}</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{route('foundation_register_view')}}">{{__('common.foundation_signup')}}</a>
                         </div>
                     </li>
                     @if (Route::has('register'))
