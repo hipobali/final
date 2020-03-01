@@ -25,14 +25,14 @@
     <!-- javascript link for bootstrap -->
 
     <!-- container -->
-    <div class="container-fluid mt-5">
+    <div class="container-fluid">
 
         <!-- purpose -->
         <div class="purpose">
-            <div class="about_title">
-                <img src="../../../img/left_kanote.png" class="left_kanote">
-                <h4 class="about_title_text" style="color: hsl(35,100%,50%)">OUR MAIN PURPOSE</h4>
-                <img src="../../../img/right_kanote.png" class="right_kanote">
+            <div class="about_title mt-5">
+                <img src="../../../img/left_kanote.png" class="left_kanote mt-5">
+                <h4 class="about_title_text mt-5" style="color: hsl(35,100%,50%)">OUR MAIN PURPOSE</h4>
+                <img src="../../../img/right_kanote.png" class="right_kanote mt-5">
             </div>
 {{--            <h4 style="color: hsl(35,100%,50%)">OUR MAIN PURPOSE</h4>--}}
             <p>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="col about-img">
                     <img src="{{asset('img/about_us/people_in_need.jpg')}}" alt="foundation image" width="75%" style="border-radius: 10px; box-shadow: 30px 30px hsl(217.2, 93.5%, 6.1%);">
-                  
+
                 </div>
             </div>
         </div>

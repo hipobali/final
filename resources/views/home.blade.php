@@ -41,6 +41,70 @@
                                 <div class="urgent_txt">
                                     <div class="urgent_txt_ttl">
                                             <img  class="foundation_people" src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
+                                        </a>
+
+                                        <div class="modal fade" id="exampleModalp{{$foundation_posts->foundation_id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+
+                                                <div class="modal-content">
+
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <!-- Card -->
+                                                        <div class="card testimonial-card" style="background-color:lightgoldenrodyellow">
+                                                            <!-- Background color -->
+                                                            <div class="card-up indigo lighten-1"></div>
+
+                                                            <!-- Avatar -->
+                                                            <div class="avatar mx-auto white mt-3">
+                                                                <img  src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}" class="rounded-circle" height="auto" width="200" alt="woman avatar">
+                                                            </div>
+                                                            <!-- Content -->
+                                                            <div class="card-body">
+                                                                <!-- Name -->
+                                                                <h4 class="card-title"><i class="fa fa-user-alt "></i>&nbsp;{{$foundation_posts->foundation->foundation_name}}</h4>
+                                                                <hr>
+                                                                <!-- Quotation -->
+                                                                <form class="form-horizontal">
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4">{{__('common.email')}}</label>
+                                                                        <p class="col-8"> :&nbsp;&nbsp;Email</p>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4">{{__('common.president_name')}}</label>
+                                                                        <p class="col-8"> :&nbsp;&nbsp;{{$foundation_posts->foundation->president_name}}</p>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4">{{__('common.member_count')}}</label>
+                                                                        <p class="col-8"> :&nbsp;&nbsp;{{$foundation_posts->foundation->member_count}}</p>
+                                                                    </div><div class="form-group row">
+                                                                        <label class="col-4">{{__('common.address')}}</label>
+                                                                        <p class="col-8"> :&nbsp;&nbsp;{{$foundation_posts->foundation->address}}</p>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4">{{__('common.phone')}}</label>
+                                                                        <p class="col-8"> :&nbsp;&nbsp;{{$foundation_posts->foundation->phone}}</p>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+
+                                                        </div>
+                                                        <!-- Card -->
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <a href="{{route('get_donation_form',$foundation_posts->id)}}" type="button" class="btn btn-primary">Donate Now</a>
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
                                         <h4 >{{$foundation_posts->foundation->foundation_name}}</h4>
 
                                     </div>
@@ -69,7 +133,7 @@
                                                     @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
                                                     <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="465" height="240">
                                                     @endif
-                                                       
+
                                                         <p class="text-left">  {{$foundation_posts->f_post_detail}}</p>
                                                     </div>
                                                     <div class="modal-footer">
@@ -197,7 +261,7 @@
                                 <div class="modal fade" id="exampleModall{{$foundation_posts->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
-                                            <div class="modal-header">   
+                                            <div class="modal-header">
                                                 <img class="foundation_people" src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
                                                 <h4 class="ml-2 mt-3" >{{$foundation_posts->foundation->foundation_name}}</h4>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -206,9 +270,9 @@
                                             </div>
                                             <div class="modal-body">
                                                 @if(is_null($foundation_posts->user_post_id))
-                                                    <img class="mb-4" src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="465" height="240">
+                                                    <img class="detail_img mb-4" src="{{url('uploads/'.$foundation_posts->f_post_image)}}" width="465" height="240">
                                                 @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
-                                                    <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="465" height="240">
+                                                    <img class="detail_img mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="465" height="240">
                                                 @endif
                                                 <p class="text-left">  {{$foundation_posts->f_post_detail}}</p>
                                             </div>

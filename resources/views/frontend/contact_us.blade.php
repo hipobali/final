@@ -13,11 +13,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   
-    <div class="container ">
+
+    <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-12">
-                <div class="card">
+                <div class="card mt-5">
                     @if(session()->has('success'))
                     <div class="alert alert-success alert-dismissible">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-12">
-                <div class="card bg-light mb-3">
+                <div class="card bg-light mb-3 mt-5">
                     <div class="card-header text-center text-white text-uppercase" style="background-color: hsl(35,100%,50%)"><i class="fa fa-home"></i> Address</div>
                     <div class="card-body text-center">
                         <p>No.22, BaYintNaung(9) Street,</p>
