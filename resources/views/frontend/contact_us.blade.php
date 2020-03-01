@@ -79,9 +79,7 @@
                     <a class="logo" href="/" >
                         <img src="../../../img/logo.png" width="150px" height="">
                     </a><br><br>
-                    <p class="mb-0 mt-5">
-                        We rise by lifting others.
-                    </p>
+
                 </div>
 
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">

@@ -14,7 +14,7 @@
 <body >
 <div class="container-fluid mt-5 mb-5">
     <div class="row">
-        <div class="col-md-6 offset-3">
+        <div class="col-md-6  offset-md-3 col-sm-6 offset-sm-3" >
             <form action="{{route('donate_form')}}" method="post">
                 @csrf
                         <h2 class="modal-title text-center" id="exampleModalLabel">Donation Title</h2>
@@ -121,10 +121,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-6 col-xl-6">
                                 <a href="{{route('donate_form_cancel')}}" type="button" class="btn btn-dark btn-block" data-dismiss="modal" > Cancel</a>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-6 col-xl-6">
                                 <button type="submit" class="btn btn-dark btn-block">Donate</button>
                             </div>
                         </div>
