@@ -47,6 +47,7 @@
         <!-- foundation -->
         <div class="foundation">
             <div class="row">
+
                 <div class="col about-img" style="text-align: center; width: 100%;">
                     <img src="{{asset('img/about_us/united_nations_organization.jpg')}}" alt="foundation image" width="75%"  style="border-radius: 10px; box-shadow: 30px 30px hsl(217.2, 93.5%, 6.1%);">
                 </div>
@@ -73,7 +74,7 @@
                     </p>
                     <hr>
                 </div>
-                <div class="col about-img">
+                <div class="col about-img hide_img">
                     <img src="{{asset('img/about_us/people_in_need.jpg')}}" alt="foundation image" width="75%" style="border-radius: 10px; box-shadow: 30px 30px hsl(217.2, 93.5%, 6.1%);">
 
                 </div>
@@ -84,7 +85,7 @@
         <!-- donor -->
         <div class="donor">
             <div class="row">
-                <div class="col about-img" style="width: 100%;">
+                <div class="col about-img hide_img" style="width: 100%;">
                     <img src="{{asset('img/about_us/donor.jpg')}}" alt="foundation image" width="75%" style="border-radius: 10px; box-shadow: 30px 30px hsl(217.2, 93.5%, 6.1%);">
                 </div>
                 <div class="col">
@@ -102,7 +103,7 @@
 
         <!-- our developer team -->
         <!-- for each person -->
-        <h5 style="margin-left:500px; color: hsl(35,100%,50%)">Our Developer Team</h5>
+        <h5 style="color: hsl(35,100%,50%)">Our Developer Team</h5>
         <hr style="width: 50%; margin-bottom: 2.5%;">
         <div class="alignment">
             <figure class="snip1566">
@@ -168,7 +169,7 @@
     <!-- footer -->
     <footer>
         <a style="text-decoration:none;" class="logo" href="/">
-            <img class="logo_img" src="{{asset('img/logo.png')}}" alt="">
+            <img class="logo_img" src="{{asset('img/logo.png')}}" alt="" style="width: 150px;">
         </a>
         <div class="footer_menu">
         <a style="text-decoration:none;" href="{{url('donor/home')}}">News</a><a style="text-decoration:none;" href="{{url('User/about_us')}}">About</a><a style="text-decoration:none;" href="{{url('User/ContactUs')}}">Contact</a><a style="text-decoration:none;" href="{{url('User/termsandconditions')}}">Terms and Conditions</a>
