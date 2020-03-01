@@ -1,4 +1,4 @@
-@extends('layouts.frontend.app1')
+@extends('layouts.frontend.app')
 @include('layouts.frontend.nav')
 @section('content')
     <title>Terms And Conditions</title>
@@ -17,37 +17,34 @@
     <!-- background-design.css -->
 
     <!-- main body -->
-    <div class="container-fluid " style="width: 100%">
+    <div class="mg_top container" style="width: 100%">
 
         <!-- main title -->
-        <h1 style="margin: 1.5vw auto; color: hsl(35,100%,50%)" class="mt-5">Terms And Conditions</h1>
+        <h1 style="margin: 1.5vw auto; color: hsl(35,100%,50%)">{{__('common.terms_and_conditions')}}</h1>
         <!-- main title -->
 
         <!-- foundation -->
         <div class="container foundation">
             <!-- subtitle foundation -->
-            <h3 class="subtitle-foundation-h2" style="color: hsl(35,100%,50%)">Non Profit Organization(Foundation)</h3>
+            <h3 class="subtitle-foundation-h2" style="color: hsl(35,100%,50%)">{{__('common.people_in_need')}}</h3>
             <!-- subtitle foundation -->
 
             <!-- content foundation -->
             <ul class="content-foundation-ul">
                 <li>
-                    The organization must have to register.
+                    {{__('term_condition.organization_tc1')}}
                 </li>
                 <li>
-                    To register, the organization has to add the count of members and
-                    founded year to determine the foundation is real or fake.
+                    {{__('term_condition.organization_tc2')}}
                 </li>
                 <li>
-                    Before accepting the request from the people-in-need, please read carefully the information of the people-in-need
-                    (After accepting the request, the foundation cannot cancel or deny the request).
+                    {{__('term_condition.organization_tc3')}}
                 </li>
                 <li>
-                    Every post that uploaded to the website by 'A Organization' have to take fully responsibility by the 'A Organzation'.
-                    (Note: In 'A Organization', 'A' means the name of organzation).
+                    {{__('term_condition.organization_tc4')}}
                 </li>
                 <li>
-                    Please enter the registeration certificate, or allowance of the authority.
+                    {{__('term_condition.organization_tc5')}}
                 </li>
             </ul>
             <!-- content foundation -->
@@ -57,19 +54,18 @@
         <!-- people-in-need -->
         <div class="container people-in-need">
             <!-- subtitle people-in-need -->
-            <h3 class="subtitle-people-in-need-h2" style="color: hsl(35,100%,50%)">Non Profit Organization(Foundation)</h3>
+            <h3 class="subtitle-people-in-need-h2" style="color: hsl(35,100%,50%)">{{__('common.people_in_need')}}</h3>
             <!-- subtitle/ people-in-need -->
             <!-- content people-in-need -->
             <ul class="content-people-in-need-ul">
                 <li>
-                    People-in-need(user who want to post the request) must have to regiter.
+                    {{__('term_condition.people_tc1')}}
                 </li>
                 <li>
-                    To register, people-in-need must have to fill the registeration correctly.
+                    {{__('term_condition.people_tc2')}}
                 </li>
                 <li>
-                    To post the request about needed area or place, please post the information
-                    with statements(photos or videos).
+                    {{__('term_condition.people_tc3')}}
                 </li>
             </ul>
             <!-- content people-in-need -->
@@ -79,18 +75,18 @@
         <!-- donor -->
         <div class="container donor">
             <!-- subtitle donor -->
-            <h3 class="subtitle-donor-h2" style="color: hsl(35,100%,50%)">Donor(Visitor)</h3>
+            <h3 class="subtitle-donor-h2" style="color: hsl(35,100%,50%)">{{__('common.visitor')}}</h3>
             <!-- subtitle donor -->
             <!-- content donor -->
             <ul class="content-donor-ul">
                 <li>
-                    Donor(Visitor) does not need to register.
+                    {{__('term_condition.donor_tc1')}}
                 </li>
                 <li>
-                    Donor can only see the posts that uploaded by non-profit organization(foundation).
+                    {{__('term_condition.donor_tc2')}}
                 </li>
                 <li>
-                    Please do not click the donate button without responsibility.
+                    {{__('term_condition.donor_tc3')}}
                 </li>
             </ul>
             <!-- content donor -->
