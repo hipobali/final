@@ -3,7 +3,7 @@
     Foundation SingUp
 @stop
 @section('content')
-
+<link href="{{asset('css/foundation_signUp.css')}}" rel="stylesheet">
     <div class='container'>
         <div class="row">
             <div class="col-md-6 left_side" >
@@ -27,7 +27,7 @@
                 <img class="pp img-fluid " src="{{asset('img/pp.png')}}" style="margin-top: 100px;">
             </div>
 
-            <div class="col-md-6  ">
+            <div class="col-md-6 mb-5 ">
                 <div class=" card  box-shadow f_card">
                     <form method="post" action="{{route('foundation_register')}}" enctype="multipart/form-data">
                         <div class="card-header text-center">

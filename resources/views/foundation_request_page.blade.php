@@ -11,15 +11,15 @@
 
     <div class="container-fluid f_body" style="padding-top: 3vw;">
         <div class="row">
-            <div class="col-md-3">
-                <div class="list-group request_list position-fixed ">
+            <div class="col-md-3 col-sm-12 mb-sm-2">
+                <div class="list-group request_list  ">
                     <a href="#" id="showhidePeopleInNeed/showhideDonor" style="text-decoration: none" class="item1 list-group-item"><span>All</span>&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
                     <a href="#" id="showhideDonor" style="text-decoration: none" class="item2 list-group-item"><span>Request from donor</span>&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
                     <a href="#" id="showhidePeopleInNeed"  style="text-decoration: none" class="item3 list-group-item"><span>Request from people in need</span> &nbsp;<i class="fa fa-arrow-circle-right"></i></a>
 
                 </div>
             </div>
-            <div class="col-md-5 ">
+            <div class="col-md-5 col-sm-12 mb-sm-2 ">
 
                 @forelse($user_post as $user_posts)
                 <!-- Card -->
@@ -246,7 +246,7 @@
                         @endif
                     @endforeach
             </div>
-            <div class="col-md-4 mb-5">
+            <div class="col-md-4 col-sm-12 mb-5">
                 <div class="card request_card">
                     <div class="card-header text-center"><strong>Post About Donation</strong></div>
                     <div class="card-body">

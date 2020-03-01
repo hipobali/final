@@ -27,7 +27,7 @@
                 </p>
                 <img class="pp img-fluid" src="../../../img/pp.png" style="margin-top: 100px;">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-5">
                 <div class="card box-shadow ">
                     <form method="post" action="{{route('people_register')}}" enctype="multipart/form-data">
                         <div class="card-header text-center">

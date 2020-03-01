@@ -294,12 +294,12 @@
             </div>
         </div>
 
-        <footer>
-            <a class="logo" href="/">
+        <footer >
+            <a style="text-decoration:none;" class="logo" href="/">
                 <img class="logo_img" src="{{asset('img/news_post/logo.png')}}" alt="">
             </a>
             <div class="footer_menu">
-                <a href="/">{{__('common.home')}}</a><a href="#content_about">{{__('common.about')}}</a><a href="">{{__('common.contact')}}</a><a href="#content_terms">{{__('common.terms_and_conditions')}}</a>
+            <a style="text-decoration:none;" href="{{url('donor/home')}}">{{__('common.home')}}</a><a style="text-decoration:none;" href="{{url('User/about_us')}}">{{__('common.about')}}</a><a style="text-decoration:none;" href="{{url('User/ContactUs')}}">{{__('common.contact')}}</a><a style="text-decoration:none;" href="{{url('User/termsandconditions')}}">{{__('common.terms_and_conditions')}}</a>
             </div>
             <p class="txt_copyright">2019© All Rights Reserved. EasyDonateMyanmar.com</p>
             <div class="social_menu">

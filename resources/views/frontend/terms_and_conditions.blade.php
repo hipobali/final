@@ -1,5 +1,5 @@
-@extends('layouts.frontend.main')
-
+@extends('layouts.frontend.app1')
+@include('layouts.frontend.nav')
 @section('content')
     <title>Terms And Conditions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +17,10 @@
     <!-- background-design.css -->
 
     <!-- main body -->
-    <div class="container-fluid" style="width: 100%">
+    <div class="container-fluid " style="width: 100%">
 
         <!-- main title -->
-        <h1 style="margin: 1.5vw auto; color: hsl(35,100%,50%)">Terms And Conditions</h1>
+        <h1 style="margin: 1.5vw auto; color: hsl(35,100%,50%)" class="mt-5">Terms And Conditions</h1>
         <!-- main title -->
 
         <!-- foundation -->
