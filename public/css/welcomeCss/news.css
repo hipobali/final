@@ -220,6 +220,11 @@ p {
     padding: 0px 0px 10px 135px;
 }
 
+.donation{
+    background-color: #e3e3e3;
+    padding-top: 30px;
+}
+
 /*end donation list title*/
 .inner {
     width: 980px;
@@ -313,6 +318,8 @@ p {
     box-shadow: 1px 3px 8px 1px rgba(143, 143, 143, 0.4);
     width: 298px;
     margin:0 13px 60px  ;
+    background-color: white;
+    border-radius: 1rem;
 }
 .donation_data_photo {
     margin: -20px 20px 0px 20px;
@@ -956,9 +963,7 @@ footer .logo,
         width: 100%;
         text-align: center;
     }
-    .logo_img{
-        width: 10%;
-    }
+
     .footer_menu{
         width:100%;
         margin: 2vw auto;
