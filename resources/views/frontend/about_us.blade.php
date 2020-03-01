@@ -168,7 +168,7 @@
     <!-- footer -->
     <footer>
         <a class="logo" href="/">
-            <img class="logo_img" src="{{asset('img/logo_aa.png')}}" alt="">
+            <img class="logo_img" src="{{asset('img/logo.png')}}" alt="">
         </a>
         <div class="footer_menu">
             <a href="/">News</a><a href="#content_about">About</a><a href="{{route('contact_us_nav')}}">Contact</a><a href="#content_terms">Terms and Conditions</a>
