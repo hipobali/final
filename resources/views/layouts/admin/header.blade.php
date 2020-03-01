@@ -53,7 +53,9 @@
           <li class="header-menu">
             <span>User</span>
           </li>
-
+          <li>
+          <a class="dropdown-item" href="{{route('foundation_register_view')}}">{{__('common.foundation_signup')}}</a>
+          </li>
           <li>
             <a href="{{ url('admin/user_data') }}">
               <span>User Data</span>

@@ -1,4 +1,5 @@
-@extends('layouts.frontend.main')
+@extends('layouts.frontend.app')
+@include('layouts.frontend.nav')
 @section('content')
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -13,9 +14,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
    
-    <div class="container mt-5">
+    <div class="container ">
         <div class="row">
-            <div class="col">
+            <div class="col-md-8 col-sm-12">
                 <div class="card">
                     @if(session()->has('success'))
                     <div class="alert alert-success alert-dismissible">
@@ -47,10 +48,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-4">
+            <div class="col-md-4 col-sm-12">
                 <div class="card bg-light mb-3">
                     <div class="card-header text-center text-white text-uppercase" style="background-color: hsl(35,100%,50%)"><i class="fa fa-home"></i> Address</div>
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <p>No.22, BaYintNaung(9) Street,</p>
                         <p>Kamarkyi Road, ThinGanKwin Township,</p>
                         <p>Yangon, Myanmar</p>
@@ -78,7 +79,7 @@
                     <a class="logo" href="/" >
                         <img src="../../../img/logo.png" width="150px" height="">
                     </a><br><br>
-                    <p class="mb-0">
+                    <p class="mb-0 mt-5">
                         We rise by lifting others.
                     </p>
                 </div>

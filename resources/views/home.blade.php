@@ -40,8 +40,6 @@
 
                                 <div class="urgent_txt">
                                     <div class="urgent_txt_ttl">
-
-                                        <a data-toggle="modal" data-target="#exampleModalp{{$foundation_posts->foundation_id}}">
                                             <img  class="foundation_people" src="{{url('uploads/'.$foundation_posts->foundation->foundation_profile)}}"  alt="people" width="50" height="50" style="border-radius: 30px;" >
                                         </a>
 

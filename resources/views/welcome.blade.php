@@ -86,7 +86,7 @@
                 @foreach($foundationPost as $foundationPosts)
                 <li class="news">
                     <div class="img_news">
-                        @if(($foundationPosts->user_post_id)==0)
+                        @if(is_null($foundationPosts->user_post_id))
                             <img src="{{url('uploads/'.$foundationPosts->f_post_image)}}" alt="Urgent_photo" width="234" height="200">
                         @elseif($foundationPosts->user_post_id ==$foundationPosts->userPost->id)
                             <img src="{{url('uploads/'.$foundationPosts->userPost->image)}}" alt="Urgent_photo" width="234" height="200">
