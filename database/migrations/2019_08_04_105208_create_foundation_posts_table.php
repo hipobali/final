@@ -17,9 +17,9 @@ class CreateFoundationPostsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
             $table->bigInteger('foundation_id');
-            $table->bigInteger('user_post_id')->default(null);
+            $table->bigInteger('user_post_id')->nullable();
             $table->text('f_post_detail');
-            $table->string('f_post_image')->default(null);
+            $table->string('f_post_image')->nullable();
             $table->text('f_post_category');
             $table->timestamps();
         });
