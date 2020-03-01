@@ -110,8 +110,8 @@
                     <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
                     <ul class="list-unstyled">
                         <li style="float: left"><a href="https://www.facebook.com/လႉမယ္လြယ္လြယ္-107640630579396/?eid=ARC2LdA06F1AyHQq1mdN21B5l-UqxelPvIbCylgzcBKfmwfx4Mbyc-I0Z0qL0tuLCr9EkYdW9WAS7nPI"><i class="fa fa-facebook fa-2x pr-3"></i></a></li>
-                        <li style="float: left"><a href="https://www.instagram.com/"><i class="fa fa-twitter fa-2x pr-3"></i></a></li>
-                        <li style="float: left"><a href="https://twitter.com/DonateEasy"><i class="fa fa-instagram fa-2x pr-3"></i></a></li>
+                        <li style="float: left"><a href="https://twitter.com/DonateEasy"><i class="fa fa-twitter fa-2x pr-3"></i></a></li>
+                        <li style="float: left"><a href="https://www.instagram.com/"><i class="fa fa-instagram fa-2x pr-3"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-12 copyright mt-3">
