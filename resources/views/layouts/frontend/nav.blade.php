@@ -4,11 +4,11 @@
     <div class="container-fluid">
         @if(Auth::user())
             <a class="navbar-brand" href="{{ url('/home') }}">
-                <img class="img-fluid" src="{{asset('img/logo.png')}}" width="150px" height="50px">
+                <img class="img-fluid" src="{{asset('img/logo.png')}}" width="150px" height="">
             </a>
             @else
             <a class="navbar-brand" href="{{ url('donor/home') }}">
-                <img class="img-fluid" src="{{asset('img/logo.png')}}" width="150px" height="50px">
+                <img class="img-fluid" src="{{asset('img/logo.png')}}" width="150px" height="">
             </a>
         @endif
         <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22"

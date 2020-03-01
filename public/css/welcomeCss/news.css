@@ -486,9 +486,10 @@ footer .logo,
 }
 
 .logo_img{
-    width: 25%;
+    width: 150px;
     height: auto;
     text-align: center;
+    margin-left: 30px;
 }
 .social_menu{
     right: 0;
@@ -890,17 +891,12 @@ footer .logo,
     }
     footer .logo,
     .social_menu{
-        width: 27% ;
+        width: 20% ;
     }
     .social_menu a{
         padding: 0 0.714vw;
     }
-    footer .logo{
-        left: 6.122vw;
-    }
-    .logo_img{
-        width: 20%;
-    }
+    
     .social_menu img{
         width: 15%;
         height: auto;
