@@ -1,16 +1,17 @@
 $(document).ready(function() {
 
     new CircleType(document.getElementById('curve')).radius(384);
-	$(".btn_menu").click(function() {
-	    if ($('.btn_menu').hasClass('is_active')) {
-	        $('.responsive_content').removeClass('show');
-	        $(this).removeClass('is_active');
+	// $(".btn_menu").click(function() {
+	//     if ($('.btn_menu').hasClass('is_active')) {
+	//         $('.responsive_content').removeClass('show');
+	//         $(this).removeClass('is_active');
+    //
+	//     } else {
+	//         $(".btn_menu").addClass("is_active");
+	//         $('.responsive_content').addClass('show');
+	//     }
+	// });
 
-	    } else {
-	        $(".btn_menu").addClass("is_active");
-	        $('.responsive_content').addClass('show');
-	    }
-	});
 
 	if ($(window).width() < 768) {
 		$('.news_list').slick({

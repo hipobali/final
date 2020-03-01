@@ -17,31 +17,34 @@
 <body>
 <div id="home">
     <div class="topnav ">
-        <a href=""><img src="{{asset('img/logo.png')}}" width="150px" height=""></a>
-        <div class="topnav-right only_pc">
+        <a href=""><img src="{{asset('img/logo.png')}}" id="logo_nav"></a>
+        <a href="javascript:void(0);" class="hbg_icon">
+            <i class="fa fa-bars fa-2x"></i>
+        </a>
+        <div class="topnav-right responsive_nav" id="myTopnav">
             <a href="#content_news">{{ __('common.news') }}</a>
             <a href="#content_about">{{ __('common.about') }}</a>
             <a href="#content_contact">{{ __('common.contact') }}</a>
             <a href="#content_terms">{{ __('common.terms_and_conditions') }}</a>
             <a href="{{url('locale/en')}}" style="margin-right: 0"><img src="../../../img/flagEng.png" width="30px" height="30px">Eng</a>
             <a href="{{url('locale/mm')}}" style="margin-right: 0"><img src="../../../img/flagMyanmar.png" width="30px" height="30px">မြန်မာ  &nbsp;</a>
-{{--            <a href="#" style="margin-right: 0"><img src="../../../img/flagJapan.png" width="30px" height="30px">日本 &nbsp;</a>--}}
+
         </div>
-        <div class="responsive_nav only_sp">
-            <div class="btn_menu">
-                <div class="icon_menu">
-                    <span></span>
-                </div>
-            </div>
-            <div class="responsive_content only_sp">
-                <a href="/">{{ __('common.news') }}</a>
-                <a href="#content_about">{{ __('common.about') }}</a>
-                <a href="#content_contact">{{ __('common.contact') }}</a>
-                <a href="#content_terms">{{ __('common.terms_and_conditions') }}</a>
-                <a href="{{url('locale/en')}}" style="padding-right: 0;margin-right: 0">English &nbsp;/</a>
-                <a href="{{url('locale/mm')}}">မြန်မာ</a>
-            </div>
-        </div>
+{{--        <div class="responsive_nav only_sp">--}}
+{{--            <div class="btn_menu">--}}
+{{--                <div class="icon_menu">--}}
+{{--                    <span></span>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="responsive_content only_sp">--}}
+{{--                <a href="/">{{ __('common.news') }}</a>--}}
+{{--                <a href="#content_about">{{ __('common.about') }}</a>--}}
+{{--                <a href="#content_contact">{{ __('common.contact') }}</a>--}}
+{{--                <a href="#content_terms">{{ __('common.terms_and_conditions') }}</a>--}}
+{{--                <a href="{{url('locale/en')}}" style="padding-right: 0;margin-right: 0">English &nbsp;/</a>--}}
+{{--                <a href="{{url('locale/mm')}}">မြန်မာ</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
     <button class="to-top" onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <div class="home_mv " >
@@ -62,7 +65,7 @@
         <div class="content_about" id="content_about">
             <div class="about_title">
                 <img src="../../../img/left_kanote.png" class="left_kanote">
-                <h3 class="about_title_text">About</h3>
+                <h3 class="title_text">About</h3>
                 <img src="../../../img/right_kanote.png" class="right_kanote">
             </div>
             <div class="inner">
@@ -103,7 +106,7 @@
         <div class="content_contact" id="content_contact">
             <div class="contact_title">
                 <img src="../../../img/left_kanote.png" class="left_kanote">
-                <h3 class="contact_title_text">Contact</h3>
+                <h3 class="title_text">Contact</h3>
                 <img src="../../../img/right_kanote.png" class="right_kanote">
             </div>
             <div class="contact inner">
@@ -137,7 +140,7 @@
         <div class="content_terms" id="content_terms">
             <div class="terms_title">
                 <img src="../../../img/left_kanote.png" class="left_kanote">
-                <h3 class="terms_title_text">Terms and Conditions</h3>
+                <h3 class="title_text">Terms and Conditions</h3>
                 <img src="../../../img/right_kanote.png" class="right_kanote">
             </div>
             <div class="inner">
@@ -204,6 +207,15 @@
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
+
+    $(".hbg_icon").click(function () {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "responsive_nav") {
+            x.className += " responsive";
+        } else {
+            x.className = "responsive_nav";
+        }
+    });
 </script>
 </body>
 </html>

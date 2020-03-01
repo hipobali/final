@@ -7,6 +7,10 @@
     overflow: hidden;
 }
 
+#logo_nav{
+    width: 150px;
+}
+
 .topnav a{
     float: left;
     color: #ffffff;
@@ -16,6 +20,10 @@
     font-size: 18px;
     color: #000033;
     text-shadow: -2px 6px 14px #7A7A7A;
+}
+
+.responsive_nav .hbg_icon{
+    display: none;
 }
 
 .topnav-right {
@@ -171,7 +179,7 @@
     margin: 0;
 }
 
-.about_title_text{
+.title_text{
     color: hsl(35,100%,50%);
     font-size: 50px;
 }
@@ -240,10 +248,6 @@
     display: flex;
     align-items: center;
 }
-.contact_title_text{
-    color: hsl(35,100%,50%);
-    font-size: 50px;
-}
 .contact{
     padding-top: 160px;
 }
@@ -276,10 +280,6 @@
     position: absolute;
     display: flex;
     align-items: center;
-}
-.terms_title_text{
-    color: hsl(35,100%,50%);
-    font-size: 50px;
 }
 .txt_terms{
     padding: 160px 0 50px;
@@ -364,6 +364,12 @@ footer .logo,
 }
 
 @media only screen and (min-width: 768px) and (max-width: 980px){
+    #logo_nav{
+        width: 8.5rem;
+    }
+    .title_text{
+        font-size: 2.4rem;
+    }
     .inner{
         width: 78.367vw;
         margin: 0 auto;
@@ -548,52 +554,77 @@ footer .logo,
 
     /*nav bar*/
     .topnav {
-        padding: .36rem .2rem;
+        padding: .2rem .2rem;
 
     }
 
-    .topnav a{
-        margin: 0;
-        font-size: .17rem;
+    #logo_nav{
+        width: 1.5rem;
     }
+
     /* end nav bar*/
 
-
-    .responsive_content {
-        height: 0;
-        display: none;
-        position: absolute;
-        left: 0;
-        top: .95rem;
+    .title_text{
+        font-size: 0.45rem;
     }
 
-    .responsive_content .responsive_content .news {
-        border-top: none;
-    }
+    /*humburger menu*/
 
-    .responsive_content.show {
-        height: auto;
+    .responsive_nav a {display: none;}
+    .responsive_nav a.hbg_icon {
+        float: right;
         display: block;
-        z-index: 999999;
-        width: 100%;
-        margin-top: .03rem;
+        padding-right: 0.2rem;
+    }
+    .responsive_nav.responsive {
+        position: relative;
+        margin-top: 18%;
+    }
+    .hbg_icon {
+        position: absolute;
+        right: .2rem;
+    }
+    .responsive_nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
     }
 
-    .responsive_content a {
+    /*.responsive_content {*/
+    /*    height: 0;*/
+    /*    display: none;*/
+    /*    position: absolute;*/
+    /*    left: 0;*/
+    /*    top: .95rem;*/
+    /*}*/
 
-        width: 100%;
-        height: auto;
-        color: white;
-        background: #2c2c2c;
-        padding: .44rem .16rem;
-        font-size: .2rem;
-        border: .01rem solid #333333;
+    /*.responsive_content .responsive_content .news {*/
+    /*    border-top: none;*/
+    /*}*/
 
-    }
+    /*.responsive_content.show {*/
+    /*    height: auto;*/
+    /*    display: block;*/
+    /*    z-index: 999999;*/
+    /*    width: 100%;*/
+    /*    margin-top: .03rem;*/
+    /*}*/
 
-    .responsive_content a:hover {
-        color: #dba904;
-    }
+    /*.responsive_content a {*/
+
+    /*    width: 100%;*/
+    /*    height: auto;*/
+    /*    color: white;*/
+    /*    background: #2c2c2c;*/
+    /*    padding: .44rem .16rem;*/
+    /*    font-size: .2rem;*/
+    /*    border: .01rem solid #333333;*/
+
+    /*}*/
+
+    /*.responsive_content a:hover {*/
+    /*    color: #dba904;*/
+    /*}*/
 
     /*hamburger menu*/
     .btn_menu {

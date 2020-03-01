@@ -66,6 +66,9 @@
                 @else
                     @if(Auth::user()->type=='foundation')
                         <li class="nav-item">
+                            <a class="nav-link" href="{{url('home')}}">{{__('common.home')}}</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{route('foundation_request_view')}}">{{__('common.request')}}</a>
                         </li>
                         <li class="nav-item">
