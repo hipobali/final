@@ -180,7 +180,9 @@
         </div>
         <p class="txt_copyright">2019© All Rights Reserved. EasyDonateMyanmar.com</p>
         <div class="social_menu">
-            <a href="#"><img src="img/icon_fb.png" alt="" width="42" height="42"></a><a href="#"><img src="img/icon_twitter.png" alt="" width="42" height="42"></a><a href="#"><img src="img/icon_ig.png" alt="" width="42" height="42"></a>
+            <a href="https://www.facebook.com/လႉမယ္လြယ္လြယ္-107640630579396/?eid=ARC2LdA06F1AyHQq1mdN21B5l-UqxelPvIbCylgzcBKfmwfx4Mbyc-I0Z0qL0tuLCr9EkYdW9WAS7nPI"><img src="img/icon_fb.png" alt="" width="42" height="42"></a>
+            <a href="https://twitter.com/DonateEasy"><img src="img/icon_twitter.png" alt="" width="42" height="42"></a>
+            <a href="https://www.instagram.com/"><img src="img/icon_ig.png" alt="" width="42" height="42"></a>
         </div>
     </footer>
     <!-- end of footer -->
