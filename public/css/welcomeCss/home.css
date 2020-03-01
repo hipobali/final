@@ -22,7 +22,7 @@
     text-shadow: -2px 6px 14px #7A7A7A;
 }
 
-.responsive_nav .hbg_icon{
+.hbg_icon{
     display: none;
 }
 
@@ -244,7 +244,7 @@
 }
 .contact_title{
     position: absolute;
-    right: 0px;
+    right: 40px;
     display: flex;
     align-items: center;
 }
@@ -367,6 +367,9 @@ footer .logo,
     #logo_nav{
         width: 8.5rem;
     }
+    .topnav a{
+        font-size: 2vw;
+    }
     .title_text{
         font-size: 2.4rem;
     }
@@ -419,6 +422,7 @@ footer .logo,
         -o-background-size: 30.612vw auto;
         background-size: 30.612vw auto;
     }
+
     .txt_about{
         font-size: 1.633vw;
         padding: 15.204vw 0 6.122vw;
@@ -468,6 +472,9 @@ footer .logo,
     }
     .contact{
         padding-top: 16.327vw;
+    }
+    .contact_title{
+        right: 0vw;
     }
     .contact_box{
         width: 100%;
@@ -578,11 +585,12 @@ footer .logo,
     }
     .responsive_nav.responsive {
         position: relative;
-        margin-top: 18%;
+        margin-top: 20%;
     }
     .hbg_icon {
         position: absolute;
         right: .2rem;
+        display: block;
     }
     .responsive_nav.responsive a {
         float: none;
