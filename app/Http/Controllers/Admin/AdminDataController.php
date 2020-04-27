@@ -15,6 +15,7 @@ class AdminDataController extends Controller
     
     public function destroy($id)
     {
+        User::where('id',$id)->delete();
         Admin::find($id)->delete();
         return redirect()->back()->with(['message'=>'Admin deleted successfully !!']);
     }

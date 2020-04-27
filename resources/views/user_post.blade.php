@@ -39,17 +39,11 @@
                                 <img src={{ asset('img/digits/one.png') }} class="digit-size">
                                 <label for="title">&nbsp;{{__('user.title')}}</label>
                                 <select name="title" class="form-control request_textarea"  required>
-                                    <option>Orphan</option>
-                                    <option>Old Age Home</option>
-                                    <option>Disabled Peoples</option>
-                                    <option>Education</option>
-                                    <option>Funeral</option>
-                                    <option>Religious</option>
-                                    <option>Urgent</option>
-                                    <option>Others</option>
-
-
-
+                                @forelse($category as $data)
+                                <option value="{{$data->id}}">{{$data->category_name}}</option>
+                                @empty
+                                <p>There is no availiable data !</p>
+                                @endforelse
                                 </select>
                                 <span class="text-danger">{{ $errors->first('title') }}</span>
                             </div>

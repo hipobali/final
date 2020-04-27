@@ -1,13 +1,16 @@
 @extends('layouts.frontend.app')
 @extends('layouts.frontend.nav')
+@section('extra_css')
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{{asset('css/Bootstrap_Helpers/winmarkltd-BootstrapFormHelpers-d6770e0/dist/css/bootstrap-formhelpers.css')}}">
+<link rel="stylesheet" href="{{asset('css/reportForm.css')}}}">
+<link rel="stylesheet" href="{{asset('css/request.css')}}}">
+
+@endsection
 @section('content')
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{asset('css/Bootstrap_Helpers/winmarkltd-BootstrapFormHelpers-d6770e0/dist/css/bootstrap-formhelpers.css')}}">
-    <link rel="stylesheet" href="{{asset('css/reportForm.css')}}}">
-    <link rel="stylesheet" href="{{asset('css/request.css')}}}">
-
+   
 
     <div class="container-fluid f_body" style="padding-top: 3vw;">
         <div class="row">
@@ -24,7 +27,7 @@
                 @forelse($user_post as $user_posts)
                 <!-- Card -->
 
-                    <div class="card shadow card2  promoting-card" id="peopleInNeedCard">
+                    <div class="card shadow card2 mb-4  promoting-card" id="peopleInNeedCard">
                         <!-- Card content -->
                         <div class="card-body ">
                             <div class="row">
@@ -79,9 +82,9 @@
                                         <p class="card-text"><i class="far fa-clock pr-2"></i>{{$user_posts->created_at->diffForHumans()}}</p>
                                     </div>
                                 </div>
-                                <div class="col-md-6 float-right">
-                                    <div class="dropdown">
-                                        <a class="dropdown-toggle float-right" href="#" id="Dropdown" role="button" data-toggle="modal" data-target="#reportFormModal{{$user_posts->id}}" aria-haspopup="true" aria-expanded="false" style="text-decoration: none">
+                                <div class="col-md-6 ">
+                                    <div class="dropdown float-right">
+                                        <a class="dropdown-toggle " href="#" id="Dropdown" role="button" data-toggle="modal" data-target="#reportFormModal{{$user_posts->id}}" aria-haspopup="true" aria-expanded="false" style="text-decoration: none">
                                             Report
                                         </a>
                                     </div>
@@ -140,6 +143,15 @@
                                 <div class="mask rgba-white-slight"></div>
                             </a>
                         </div>
+
+<style>
+    .list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #ff9500 !important;
+    border-color: #ff9500  !important;
+       </style>
+
                         <!-- Card content -->
                         <div class="card-body people_card text-center">
                             <div class="collapse-content">
@@ -179,7 +191,8 @@
                                                             <form method="post" action="{{route('foundation_request_post',Auth::user()->id)}}" enctype="multipart/form-data">
                                                                 <div class="form-group">
                                                                     <textarea rows="10" name="f_post_detail"  class="form-control request_textarea" required >
-                                                                         We have already checked for this information ,We will fully take responsibility for this information.
+                                                                         We have already checked for this information ,
+                                                                         We will fully take responsibility for this information.
                                                                           Item Requested :  &nbsp;{{$user_posts->items_requested}}
                                                                           Estimated Costs :  &nbsp;{{$user_posts->cost}}
                                                                           Significance of the project :  &nbsp;{{$user_posts->significance}}
@@ -192,7 +205,11 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <select name="f_post_category" class="form-control request_textarea" placeholder="Write about donation details" required>
-                                                                            <option>{{$user_posts->title}}</option>
+                                                                          @forelse($category as $data)
+                                                                            <option value="{{$data->id}}" @if($data->id == $user_posts->title) selected @endif >{{$data->category_name}}</option>
+                                                                            @empty
+                                                                            <p>There is no data</p>
+                                                                            @endforelse
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group">

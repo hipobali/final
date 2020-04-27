@@ -3,7 +3,7 @@
 <nav class="navbar  fixed-top navbar-expand-md nav-bg shadow-sm">
     <div class="container-fluid">
         @if(Auth::user())
-            <a class="navbar-brand" href="{{ url('/home') }}">
+            <a class="navbar-brand" href="{{ url('home') }}">
                 <img class="img-fluid" src="{{asset('img/logo.png')}}" width="150px" height="">
             </a>
             @else
@@ -80,6 +80,9 @@
                         </li>
                     @endif
                 @if(Auth::user()->type=='people')
+                <li class="nav-item">
+                        <a class="nav-link" href="{{url('home')}}">{{__('common.home')}}</a>
+                    </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('request_user_post')}}">{{__('common.post')}}</a>
                             </li>

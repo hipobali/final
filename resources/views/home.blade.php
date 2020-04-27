@@ -2,22 +2,16 @@
 @include('layouts.frontend.nav')
 @section('extra_css')
     <link href="{{asset('css/news.css')}}" rel="stylesheet">
-@endsection
-@section('content')
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <title> @section('title')
-            Home
-        @endsection </title>
     <link rel="stylesheet" type="text/css" href="{{asset('css/welcomeCss/slick-theme.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/welcomeCss/slick.css')}}">
     <link rel="stylesheet" href="{{asset('css/modal_for_details.css')}}">
     <link rel="stylesheet" href="{{asset('css/welcomeCss/news.css')}}">
     <link rel="stylesheet" href="{{asset('css/btn.css')}}">
-    </head>
-    <body>
+@endsection
+@section('content')
+
     <div id="news">
+
         <div class="news_mv ">
             <div class="mv_parent">
                 <div class="mv_child">
@@ -29,6 +23,7 @@
         <button class="to-top" onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
         <div class="urgent">
+
             <div class="urgent_ttl">
                 <h2 class="title_weight urgent_ttl_txt">{{__('common.urgent_need')}}</h2>
             </div>
@@ -37,7 +32,7 @@
                 @foreach($foundation_post as $foundation_posts)
                     @if($foundation_posts->f_post_category=='Urgent')
 
-                        <div class="urgent_content">
+                        <div class="urgent_content text-center">
 
                             <div class="urgent_post">
 
@@ -66,7 +61,7 @@
 
                                     <div>
                                         <div class="detail_btn">
-                                            <a class="detail_link" data-toggle="modal" data-target="#exampleModal{{$foundation_posts->id}}" href="#" style="text-decoration: none" >{{__('common.detail')}} </a>
+                                            <a class="detail_link " href="{{url('detail_page/'.$foundation_posts->id)}}"  style="text-decoration: none">{{(__('common.detail'))}}</a>
                                         </div>
 
                                         <div class="modal fade" id="exampleModalCenter{{$foundation_posts->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -132,7 +127,6 @@
                             @endforeach
                         </div>
                     </div>
-
                 </div>
 
                 <div class="donation_list">
@@ -152,9 +146,7 @@
                                     <p class="category_tab orphan">
                                         {{$foundation_posts->f_post_category}}
                                     </p>
-
                                 </div>
-
                                 <div class="donation_data_ttl">
 
                                     <a data-toggle="modal" data-target="#exampleModalq{{$foundation_posts->foundation_id}}">
@@ -232,10 +224,10 @@
                                 <p class="txt_donation_post">{{str_limit($foundation_posts->f_post_detail,125)}}</p>
 
                                 <div class="detail_btn">
-                                    <a class="detail_link " href="" data-toggle="modal" data-target="#exampleModal{{$foundation_posts->id}}" style="text-decoration: none">{{(__('common.detail'))}}</a>
+                                <a class="detail_link " href="{{url('detail_page/'.$foundation_posts->id)}}"  style="text-decoration: none">{{(__('common.detail'))}}</a>
                                 </div>
 
-                                <div class="modal fade" id="exampleModal{{$foundation_posts->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                {{-- <div class="modal fade" id="exampleModal{{$foundation_posts->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
 
                                         <div class="modal-content">
@@ -256,7 +248,7 @@
                                                     <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="100%" height="auto">
                                                 @endif
 
-                                                <p  class="aa text-left">  {{$foundation_posts->f_post_detail}}</p>
+                                                <p  class="aa  modal_p" style="white-space:pre-line;">  {{$foundation_posts->f_post_detail}}</p>
 
                                             </div>
 
@@ -267,7 +259,7 @@
 
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         @endforeach
                     </div>
@@ -427,5 +419,4 @@
             }
         });
     </script>
-    </body>
 @stop

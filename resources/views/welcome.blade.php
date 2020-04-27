@@ -39,9 +39,16 @@
 
             <div class="text_sec">
                 <p class="txt_mv">WE RISE BY LIFTING OTHERS</p>
-                <a class="mv_link  " href="{{route('donor_home')}}" title="">
-                    {{__('welcome.get_started')}}
-                </a>
+             @if(Auth::user())
+             <a class="mv_link  " href="{{route('home')}}" title="">
+                {{__('welcome.get_started')}}
+            </a>
+            @else
+            <a class="mv_link  " href="{{route('donor_home')}}" title="">
+                {{__('welcome.get_started')}}
+            </a>
+               @endif
+                
             </div>
         </div>
 
@@ -90,7 +97,7 @@
         <!-- end of about -->
         <div class="content_contact" id="content_contact">
             <div class="contact_title">
-                <img src="asset('img/left_kanote.png')}}" class="left_kanote">
+                <img src="{{asset('img/left_kanote.png')}}" class="left_kanote">
                 <h3 class="title_text">Contact</h3>
                 <img src="{{asset('img/right_kanote.png')}}" class="right_kanote">
             </div>

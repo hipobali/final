@@ -89,5 +89,8 @@ Route::group(['prefix'=>'people','middleware'=>'people'],function (){
   
 });
 
+//Detail
 
-
+Route::get('detail_page/{id}','HomeController@detailPage');
+Route::get('post_delete/people/{id}','HomeController@PeoplePostDelete');
+Route::get('post_delete/foundation/{id}','HomeController@FoundationPostDelete');

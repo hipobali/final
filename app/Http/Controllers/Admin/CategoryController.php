@@ -23,7 +23,11 @@ class CategoryController extends Controller
     }
 
     public function destroy($id){
+        donateForm::where('donate_category',$id)->delete();
+        foundationPost::where('f_post_category',$id)->delete();
+        userPost::where('title',$id)->delete();
         Category::find($id)->delete();
+
         return redirect()->back()->with(['message'=>'Category deleted successfully !!']);
     }
 

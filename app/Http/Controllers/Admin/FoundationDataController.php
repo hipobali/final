@@ -14,6 +14,7 @@ class FoundationDataController extends Controller
 
     public function destroy($id)
     {
+        User::where('id',$id)->delete();
         Foundation::find($id)->delete();
         return redirect()->back()->with(['message'=>'Foundation  deleted successfully !!']);
     }

@@ -12,4 +12,7 @@ class Category extends Model
          return $this->hasMany('App\Foundation','id');
       }
 
+       public function foundationPost(){
+        return $this->hasMany('App\foundationPost','id');
+    }
 }

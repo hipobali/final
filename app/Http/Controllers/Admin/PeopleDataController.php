@@ -15,6 +15,7 @@ class PeopleDataController extends Controller
 
     public function destroy($id)
     {
+        User::where('id',$id)->delete();
         People::find($id)->delete();
         return redirect()->back()->with(['message'=>'People deleted successfully !!']);
     }

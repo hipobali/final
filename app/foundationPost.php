@@ -10,6 +10,7 @@ class foundationPost extends Model
     public  function  foundation(){
         return $this->belongsTo('App\Foundation');
     }
+   
     public function categories(){
         return $this->belongsTo('App\Category');
     }

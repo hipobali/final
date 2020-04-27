@@ -256,7 +256,7 @@
                                                     <img class="mb-4" src="{{url('uploads/'.$foundation_posts->userPost->image)}}" width="100%" height="auto">
                                                 @endif
 
-                                                <p  class="aa text-left">  {{$foundation_posts->f_post_detail}}</p>
+                                                <p  class="aa text-left " style="white-space: pre-line">  {{$foundation_posts->f_post_detail}}</p>
 
                                             </div>
 

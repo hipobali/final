@@ -15,6 +15,7 @@ class PeoplePostController extends Controller
 
     public function destroy($id)
     {
+        foundationPost::where('user_post_id',$id)->delete();
         userPost::find($id)->delete();
         return redirect()->back()->with(['message'=>'User Post deleted successfully !!']);
     }

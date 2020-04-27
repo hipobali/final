@@ -69,7 +69,8 @@ class HomeController extends Controller
     }
 
     public function profile(Request $request){
-
+        $selectfoundation=Foundation::all();
+        $selectcategory=Category::all();
         $f_id=foundationPost::all();
         $p_id=userPost::all();
         $data=User::where('id',$request->id)->first();
@@ -77,9 +78,9 @@ class HomeController extends Controller
         $people=People::where('user_id',$request->id)->first();
         $userpost=userPost::where('user_id',$request->id)->first();
         $foundationpost=foundationPost::where('user_id',$request->id)->first();
-        $fpost=foundationPost::where('user_id',$request->id)->get();
-        $ppost=userPost::where('user_id',$request->id)->get();
-        return view('frontend.profile',compact('data','foundation','people','userpost','foundationpost','fpost','ppost','f_id','p_id'));
+        $fpost=foundationPost::where('user_id',$request->id)->paginate(6);
+        $ppost=userPost::where('user_id',$request->id)->paginate(6);
+        return view('frontend.profile',compact('data','foundation','people','userpost','foundationpost','fpost','ppost','f_id','p_id','selectfoundation','selectcategory'));
 
     }
 
@@ -112,5 +113,22 @@ class HomeController extends Controller
         $user->save();
         return redirect()->back()->with('message', 'Successfully Saved Profile!');
     }
-}
 
+    public function detailPage(Request $request){
+        $foundationPost=foundationPost::where('id',$request->id)->first();
+        return view('frontend.detail',compact('foundationPost'));
+
+    }
+
+    public function PeoplePostDelete(Request $request){
+       $post1=foundationPost::where('user_post_id',$request->id)->delete();
+        $post2=userPost::where('id',$request->id)->delete();
+
+        return redirect()->back();
+    }
+
+    public function FoundationPostDelete(Request $request){
+        $post1=foundationPost::where('id',$request->id)->delete();
+         return redirect()->back();
+     }
+}
