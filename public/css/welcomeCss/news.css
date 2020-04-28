@@ -927,8 +927,9 @@ footer .logo,
     footer .logo .logo_img{
         width:5rem;
         height: auto;
+        margin-left: 0px;
     }
-    
+
     /*detail card*/
     .detail_img{
         width: 87vw;

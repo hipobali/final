@@ -203,7 +203,7 @@ footer .logo{
 @media only screen and (max-width:768px) {
 
 
-    
+
     .hide_img{
         display: none;
     }
@@ -212,10 +212,12 @@ footer .logo{
         width: 100%;
         padding: 10vw 0 11vw 0;
     }
-    footer .logo img{
-        width:1rem;
+
+    footer .logo .logo_img {
+        width: 5rem;
         height: auto;
     }
+
     footer .logo{
         top: 20%;
         left: 0;

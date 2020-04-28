@@ -59,3 +59,10 @@
     footer a {
         color: #f8f9fa!important
     }
+
+     @media only screen and (max-width: 768px){
+        .logo img{
+            width: 5rem;
+            height: auto;
+        }
+     }
