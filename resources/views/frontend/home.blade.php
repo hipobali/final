@@ -30,7 +30,7 @@
         <div class="urgent_post_section">
 
             @foreach($foundation_post as $foundation_posts)
-                @if($foundation_posts->f_post_category=='Urgent')
+                @if($foundation_posts->category->category_name=='Urgent')
 
                     <div class="urgent_content text-center">
 
@@ -40,13 +40,10 @@
 
                                 <div class="urgent_img">
                                     @if(is_null($foundation_posts->user_post_id))
-                                        <img src="{{ url('uploads/'.$foundation_posts->f_post_image) }}"
-                                            alt="Urgent_photo" width="234" height="200">
-                                        <blade
-                                            elseif|(%24foundation_posts-%3Euser_post_id%3D%3D%24foundation_posts-%3EuserPost-%3Eid)%0D />
-                                        <img src="{{ url('uploads/'.$foundation_posts->userPost->image) }}"
-                                            alt="Urgent_photo" width="234" height="200">
-                                    @endif
+                                            <img src="{{url('uploads/'.$foundation_posts->f_post_image)}}" alt="Urgent_photo" width="234" height="200">
+                                        @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
+                                            <img src="{{url('uploads/'.$foundation_posts->userPost->image)}}" alt="Urgent_photo" width="234" height="200">
+                                        @endif
                                 </div>
 
                             </div>
@@ -159,16 +156,13 @@
 
                             <div class="donation_data_photo">
                                 @if(is_null($foundation_posts->user_post_id))
-                                    <img src="{{ url('uploads/'.$foundation_posts->f_post_image) }}"
-                                        width="260" height="240">
-                                    <blade
-                                        elseif|(%24foundation_posts-%3Euser_post_id%3D%3D%24foundation_posts-%3EuserPost-%3Eid)%0D />
-                                    <img src="{{ url('uploads/'.$foundation_posts->userPost->image) }}"
-                                        width="260" height="240">
-                                @endif
+                                            <img src="{{url('uploads/'.$foundation_posts->f_post_image)}}" alt="Urgent_photo" width="234" height="200">
+                                        @elseif($foundation_posts->user_post_id==$foundation_posts->userPost->id)
+                                            <img src="{{url('uploads/'.$foundation_posts->userPost->image)}}" alt="Urgent_photo" width="234" height="200">
+                                        @endif
 
                                 <p class="category_tab orphan">
-                                    {{ $foundation_posts->f_post_category }}
+                                    {{ $foundation_posts->category->category_name }}
                                 </p>
                             </div>
                             <div class="donation_data_ttl">
@@ -279,51 +273,6 @@
                                     style="text-decoration: none">{{ (__('common.detail')) }}</a>
                             </div>
 
-                            {{-- <div class="modal fade" id="exampleModal{{$foundation_posts->id }}"
-                            tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-
-                                <div class="modal-content">
-
-                                    <div class="modal-header">
-                                        <img class="foundation_people"
-                                            src="{{ url('uploads/'.$foundation_posts->foundation->foundation_profile) }}"
-                                            alt="people" width="50" height="50" style="border-radius: 30px;">
-                                        <h4 class="ml-2 mt-3">{{ $foundation_posts->foundation->foundation_name }}
-                                        </h4>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-
-                                    <div class="modal-body">
-
-                                        @if($foundation_posts->user_post_id==0)
-                                            <img class="mb-4"
-                                                src="{{ url('uploads/'.$foundation_posts->f_post_image) }}"
-                                                width="100%" height="auto">
-                                            <blade
-                                                elseif|(%24foundation_posts-%3Euser_post_id%3D%3D%24foundation_posts-%3EuserPost-%3Eid)%0D />
-                                            <img class="mb-4"
-                                                src="{{ url('uploads/'.$foundation_posts->userPost->image) }}"
-                                                width="100%" height="auto">
-                                        @endif
-
-                                        <p class="aa  modal_p" style="white-space:pre-line;">
-                                            {{ $foundation_posts->f_post_detail }}</p>
-
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <a href="{{ route('get_donation_form',$foundation_posts->id) }}"
-                                            type="button" class="btn btn-primary">Donate Now</a>
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div> --}}
                 </div>
                 @endforeach
             </div>
@@ -337,14 +286,13 @@
                 style="text-decoration: none">{{ __('common.previous') }}</a>
 
             @foreach(range(1,$foundation_post->lastPage()) as $i)
-                <blade
-                    if|(%24i%20%3E%3D%24foundation_post-%3EcurrentPage()%20-%202%20%26%26%20%24i%20%3C%3D%20%24foundation_post-%3EcurrentPage()%20%2B%202)%0D>
+             
                     @if($i == $foundation_post->currentPage())
                         <a class="pg_no"><span>{{ $i }}</span></a>
                     @else
                         <a href="{{ $foundation_post->url($i) }}">{{ $i }}</a>
                     @endif
-                @endif
+            
             @endforeach
 
             <a class="next_right" href="{{ $foundation_post->nextPageUrl() }}"

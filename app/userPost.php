@@ -15,4 +15,7 @@ class userPost extends Model
     public function foundationPost(){
         return $this->hasMany('App\foundationPost','id');
     }
+    public function category(){
+        return $this->belongsTo('App\Category','title');
+    }
 }

@@ -11,8 +11,8 @@ class foundationPost extends Model
         return $this->belongsTo('App\Foundation');
     }
    
-    public function categories(){
-        return $this->belongsTo('App\Category');
+    public function category(){
+        return $this->belongsTo('App\Category','f_post_category');
     }
     public function userPost(){
         return $this->belongsTo('App\userPost');

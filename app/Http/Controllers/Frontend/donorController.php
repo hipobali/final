@@ -112,4 +112,9 @@ class donorController extends Controller
 
        }
    }
+   public function detailPage(Request $request){
+    $foundationPost=foundationPost::where('id',$request->id)->first();
+    return view('frontend.detail',compact('foundationPost'));
+
+}
 }

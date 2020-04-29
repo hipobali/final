@@ -79,8 +79,8 @@ class HomeController extends Controller
         $people=People::where('user_id',$request->id)->first();
         $userpost=userPost::where('user_id',$request->id)->first();
         $foundationpost=foundationPost::where('user_id',$request->id)->first();
-        $fpost=foundationPost::where('user_id',$request->id)->paginate(6);
-        $ppost=userPost::where('user_id',$request->id)->paginate(6);
+        $fpost=foundationPost::where('user_id',$request->id)->paginate(3);
+        $ppost=userPost::where('user_id',$request->id)->paginate(3);
         return view('frontend.profile',compact('data','foundation','people','userpost','foundationpost','fpost','ppost','f_id','p_id','selectfoundation','selectcategory'));
 
     }

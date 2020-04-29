@@ -90,6 +90,6 @@ Route::group(['prefix'=>'people','middleware'=>'people'],function (){
 
 //Detail
 
-Route::get('detail_page/{id}','Frontend\HomeController@detailPage');
+Route::get('detail_page/{id}','Frontend\donorController@detailPage');
 Route::get('post_delete/people/{id}','Frontend\HomeController@PeoplePostDelete');
 Route::get('post_delete/foundation/{id}','Frontend\HomeController@FoundationPostDelete');

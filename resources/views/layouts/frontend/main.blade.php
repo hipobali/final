@@ -1,6 +1,5 @@
 @include('layouts.frontend.meta')
 @include('layouts.frontend.nav')
-@include('layouts.frontend.header')
 @yield('extra_css')
 @yield('content')
 @include('layouts.frontend.footer')

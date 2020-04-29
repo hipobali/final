@@ -13,6 +13,9 @@ class Category extends Model
       }
 
        public function foundationPost(){
-        return $this->hasMany('App\foundationPost','id');
+        return $this->hasMany('App\foundationPost','f_post_category');
     }
+        public function userPost(){
+            return $this->hasMany('App\userPost','title');
+        }
 }
