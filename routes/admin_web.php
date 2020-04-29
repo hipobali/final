@@ -7,10 +7,10 @@ Route::group(['prefix'=>'admin','middleware'=>'admin'],function (){
     Route::get('/register',function (){
         return view('auth.register.admin_register');
     });
-    Route::get('/logout', 'adminController@logout')->name('logout');
-    Route::get('/dashboard','adminController@index')->name('dashboard');
-    Route::get('foundation/register/view','FoundationController@getFoundationRegister')->name('foundation_register_view');
-    Route::post('/register/post','adminController@postAdminRegister')->name('admin_register');
+    Route::get('/logout', 'Admin\adminController@logout')->name('logout');
+    Route::get('/dashboard','Admin\adminController@index')->name('dashboard');
+    Route::get('foundation/register/view','Frontend\FoundationController@getFoundationRegister')->name('foundation_register_view');
+    Route::post('/register/post','Admin\adminController@postAdminRegister')->name('admin_register');
 
     Route::resource('category','Admin\CategoryController');
     Route::resource('foundation_data','Admin\FoundationDataController');
@@ -23,4 +23,4 @@ Route::group(['prefix'=>'admin','middleware'=>'admin'],function (){
     Route::resource('user_data','Admin\UserController');
 
 });
-Route::get('foundation/register/view','FoundationController@getFoundationRegister')->name('foundation_register_view');
+

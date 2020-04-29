@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 
 use App\Category;
 use App\Foundation;
@@ -11,6 +11,7 @@ use App\userPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Controller;
 
 class peopleController extends Controller
 {

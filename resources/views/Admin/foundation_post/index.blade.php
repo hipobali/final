@@ -35,7 +35,17 @@
                       
                          <td class="text-center">{{str_limit($data->f_post_detail,50)}}</td>
                          <td class="text-center">
-                            <img src="{{url('uploads/'.$data->f_post_image)}}" class="img-fluid"></td>
+
+                            @if(is_null($data->user_post_id))
+                            <img class="img-fluid"
+                                src="{{ url('uploads/'.$data->f_post_image) }}"
+                                alt="Card image cap">
+                        @elseif($data->user_post_id==$data->userPost->id)
+                            <img class="img-fluid"
+                                src="{{ url('uploads/'.$data->userPost->image) }}"
+                                alt="Card image cap">
+                        @endif
+                    </td>
                          <td class="text-center">{{$data->f_post_category}}</td>
                         <td class="text-center">{{$data->created_at}}</td>
                          <td class="text-center">{{$data->updated_at}}</td>

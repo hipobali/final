@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 use App\People;
 use App\Category;
 use App\Foundation;
@@ -11,9 +11,10 @@ use Illuminate\Support\Facades\Hash;
 use App\userPost;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
-{
+{   
     use AuthenticatesUsers;
 
     /**

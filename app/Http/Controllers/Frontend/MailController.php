@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 use PHPMailer\PHPMailer\Exception;
 use Illuminate\Http\Request;
 use PHPMailer\PHPMailer\PHPMailer;
+use App\Http\Controllers\Controller;
 
 class MailController extends Controller{
     public  function sendEmail(Request $request){

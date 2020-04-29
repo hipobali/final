@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Admin;
 use App\Foundation;
@@ -11,6 +11,7 @@ use App\Report;
 use App\User;
 use App\userPost;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class adminController extends Controller
 {

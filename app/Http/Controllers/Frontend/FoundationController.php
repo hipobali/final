@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 
 use App\Category;
 use App\donateForm;
@@ -11,6 +11,7 @@ use App\Report;
 use App\User;
 use App\userPost;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class FoundationController extends Controller
 {
