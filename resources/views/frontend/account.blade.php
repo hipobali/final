@@ -1,4 +1,7 @@
 @extends('layouts.frontend.main')
+@section('title')
+Update Account
+@endsection
 @section('content')
 
 <div class="container ">
@@ -53,5 +56,4 @@
         </div>
     </div>
     </div>
-
-        @endsection
+ @endsection

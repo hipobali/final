@@ -1,7 +1,13 @@
 @extends('layouts.frontend.main')
-@section('content')
+@section('extra_css')
 <link href="{{ asset('css/user_post.css') }}" rel="stylesheet">
 <link href="{{ asset('fa/css/all.css') }}" rel="stylesheet">
+@endsection
+@section('title')
+Post
+@endsection
+@section('content')
+
 <div class="stars"></div>
 <div class="twinkling"></div>
 <div class="container">

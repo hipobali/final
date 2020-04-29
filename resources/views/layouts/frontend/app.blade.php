@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="{{ asset('css/btn.css') }}">
 
     <script src="{{ asset('js/foundation.js') }}"></script>
+    @yield('extra_css')
 </head>
 
 <body>

@@ -2,10 +2,13 @@
 @section('title')
     Foundation Login
 @stop
-@section('content')
-    <script src="{{ asset('js/foundationLogin.js') }}"></script>
+@section('extra_css')
+<script src="{{ asset('js/foundationLogin.js') }}"></script>
     <link href="{{ asset('css/foundationLogin.css')}}" rel="stylesheet">
     <link href="{{ asset('fa/css/all.css') }}" rel="stylesheet">
+@endsection
+@section('content')
+    
     <div class="container">
         <div class="row" style="margin-top:50px;">
             <div class="col-md-6 text-center left-side">
@@ -67,9 +70,7 @@
                                     <button type="submit" class="btn  form-control btnSave">{{__('foundation.login')}}</button>
                                 </div>
                             </div>
-                            <div class="form-group text-center">
-                                {{__('foundation.ask_account')}}  <a class="foundation_login_register" id="login" href="{{url('foundation/register/view')}}" style="text-decoration: none">{{__('foundation.register')}}</a>
-                            </div>
+                          
                         </div>
                         @csrf
                     </form>

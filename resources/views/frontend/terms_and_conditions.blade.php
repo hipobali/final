@@ -1,21 +1,13 @@
 @extends('layouts.frontend.app')
 @include('layouts.frontend.nav')
+@section('title')
+Terms And Conditions
+@endsection
+@section('extra_css')
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{{asset('css/terms_and_conditions.css')}}">
+@endsection
 @section('content')
-    <title>Terms And Conditions</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- bootstrap.css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- bootstrap.css -->
-
-    <!-- terms_and_policies.css -->
-    <link rel="stylesheet" href="{{asset('css/terms_and_conditions.css')}}">
-    <!-- terms_and_policies.css -->
-
-    <!-- background-design.css -->
-    <!-- <link rel="stylesheet" href="background-design.css"> -->
-    <!-- background-design.css -->
-
     <!-- main body -->
     <div class="mg_top container" style="width: 100%">
 

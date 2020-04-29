@@ -1,122 +1,145 @@
 @extends('layouts.frontend.app')
 @include('layouts.frontend.nav')
+@section('title')
+Contact
+@endsection
+@section('extra_css')
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href="{{ asset('css/contactUs.css') }}" rel="stylesheet">
+<script src="js/contactUs.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+
+@endsection
 @section('content')
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <link href="{{asset('css/contactUs.css')}}" rel="stylesheet">
-    <script src="js/contactUs.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-sm-12">
-                <div class="card mt-5">
-                    @if(session()->has('success'))
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <div class="card mt-5">
+                @if(session()->has('success'))
                     <div class="alert alert-success alert-dismissible">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>{{ session()->get('success') }}</strong>
                     </div>
                 @endif
-                    <div class="card-header text-white text-center text-uppercase" style="background-color: hsl(35,100%,50%)"><i class="fa fa-envelope"></i> Contact us.
-                    </div>
-                    <div class="card-body">
-                        <form method="post" action="{{route('send_mail')}}">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input name="name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email address</label>
-                                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea name="message" class="form-control" id="message" rows="6" required></textarea>
-                            </div>
-                            <div class="mx-auto">
-                                <button type="submit" class="btn text-right" style="background-color: hsl(35,100%,50%); color: white">Submit</button></div>
-                            @csrf
-                        </form>
-                    </div>
+                <div class="card-header text-white text-center text-uppercase"
+                    style="background-color: hsl(35,100%,50%)"><i class="fa fa-envelope"></i> Contact us.
+                </div>
+                <div class="card-body">
+                    <form method="post" action="{{ route('send_mail') }}">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input name="name" type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                                placeholder="Enter name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" name="email" class="form-control" id="email"
+                                aria-describedby="emailHelp" placeholder="Enter email" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" class="form-control" id="message" rows="6" required></textarea>
+                        </div>
+                        <div class="mx-auto">
+                            <button type="submit" class="btn text-right"
+                                style="background-color: hsl(35,100%,50%); color: white">Submit</button></div>
+                        @csrf
+                    </form>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="card bg-light mb-3 mt-5">
-                    <div class="card-header text-center text-white text-uppercase" style="background-color: hsl(35,100%,50%)"><i class="fa fa-home"></i> Address</div>
-                    <div class="card-body text-center">
-                        <p>No.22, BaYintNaung(9) Street,</p>
-                        <p>Kamarkyi Road, ThinGanKwin Township,</p>
-                        <p>Yangon, Myanmar</p>
-                        <p>Email : easydonate@gmail.com</p>
-                        <p>Tel. +95 9960005016</p>
-                        <p>Tel. +95 9256137059</p>
-                        <p>Tel. +95 9769146759</p>
-                        <p>Tel. +95 9797911982</p>
-                        <p>Tel. +95 9954499492</p>
-
-                    </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card bg-light mb-3 mt-5">
+                <div class="card-header text-center text-white text-uppercase"
+                    style="background-color: hsl(35,100%,50%)"><i class="fa fa-home"></i> Address</div>
+                <div class="card-body text-center">
+                    <p>No.22, BaYintNaung(9) Street,</p>
+                    <p>Kamarkyi Road, ThinGanKwin Township,</p>
+                    <p>Yangon, Myanmar</p>
+                    <p>Email : easydonate@gmail.com</p>
+                    <p>Tel. +95 9960005016</p>
+                    <p>Tel. +95 9256137059</p>
+                    <p>Tel. +95 9769146759</p>
+                    <p>Tel. +95 9797911982</p>
+                    <p>Tel. +95 9954499492</p>
 
                 </div>
+
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Footer -->
-    <footer class="text-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-lg-4 col-xl-3">
-                    <h5>About</h5>
-                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25"><br>
-                    <a class="logo" href="/" >
-                        <img src="{{asset('img/logo.png')}}" width="150px" height="">
-                    </a><br><br>
+<!-- Footer -->
+<footer class="text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-4 col-xl-3">
+                <h5>About</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25"><br>
+                <a class="logo" href="/">
+                    <img src="{{ asset('img/logo.png') }}" width="150px" height="">
+                </a><br><br>
 
-                </div>
+            </div>
 
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
-                    <h5>Phone</h5>
-                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone mr-2"></i> +95 9960005016</li>
-                        <li><i class="fa fa-phone mr-2"></i> +95 9256137059</li>
-                        <li><i class="fa fa-phone mr-2"></i> +95 9769146759</li>
-                        <li><i class="fa fa-phone mr-2"></i> +95 9797911982</li>
-                        <li><i class="fa fa-phone mr-2"></i> +95 9954499492</li>
-                    </ul>
-                </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                <h5>Phone</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone mr-2"></i> +95 9960005016</li>
+                    <li><i class="fa fa-phone mr-2"></i> +95 9256137059</li>
+                    <li><i class="fa fa-phone mr-2"></i> +95 9769146759</li>
+                    <li><i class="fa fa-phone mr-2"></i> +95 9797911982</li>
+                    <li><i class="fa fa-phone mr-2"></i> +95 9954499492</li>
+                </ul>
+            </div>
 
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
-                    <h5>Address</h5>
-                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-home mr-2"></i>No.22, BaYintNaung(9) Street,<br> &nbsp;&nbsp;&nbsp;&nbsp; ThinGanKwin Township,<br>&nbsp;&nbsp;&nbsp;&nbsp; Yangon, Myanmar</li>
-                        <li><i class="fa fa-envelope mr-2"></i> easydonate@gmail.com</li>
-                    </ul>
-                </div>
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
+                <h5>Address</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-home mr-2"></i>No.22, BaYintNaung(9) Street,<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                        ThinGanKwin Township,<br>&nbsp;&nbsp;&nbsp;&nbsp; Yangon, Myanmar</li>
+                    <li><i class="fa fa-envelope mr-2"></i> easydonate@gmail.com</li>
+                </ul>
+            </div>
 
-                <div class="col-md-4 col-lg-2 col-xl-2">
-                    <h5>Social</h5>
-                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                    <ul class="list-unstyled">
-                        <li style="float: left"><a href="https://www.facebook.com/လႉမယ္လြယ္လြယ္-107640630579396/?eid=ARC2LdA06F1AyHQq1mdN21B5l-UqxelPvIbCylgzcBKfmwfx4Mbyc-I0Z0qL0tuLCr9EkYdW9WAS7nPI"><i class="fa fa-facebook fa-2x pr-3"></i></a></li>
-                        <li style="float: left"><a href="https://twitter.com/DonateEasy"><i class="fa fa-twitter fa-2x pr-3"></i></a></li>
-                        <li style="float: left"><a href="https://www.instagram.com/"><i class="fa fa-instagram fa-2x pr-3"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-12 copyright mt-3">
+            <div class="col-md-4 col-lg-2 col-xl-2">
+                <h5>Social</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li style="float: left"><a
+                            href="https://www.facebook.com/လႉမယ္လြယ္လြယ္-107640630579396/?eid=ARC2LdA06F1AyHQq1mdN21B5l-UqxelPvIbCylgzcBKfmwfx4Mbyc-I0Z0qL0tuLCr9EkYdW9WAS7nPI"><i
+                                class="fa fa-facebook fa-2x pr-3"></i></a></li>
+                    <li style="float: left"><a href="https://twitter.com/DonateEasy"><i
+                                class="fa fa-twitter fa-2x pr-3"></i></a></li>
+                    <li style="float: left"><a href="https://www.instagram.com/"><i
+                                class="fa fa-instagram fa-2x pr-3"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-12 copyright mt-3">
 
-                </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 @stop
-

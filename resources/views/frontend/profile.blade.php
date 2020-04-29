@@ -1,5 +1,10 @@
 @extends('layouts.frontend.main')
+@section('title')
+Profile
+@endsection
+@section('extra_css')
 <link href="{{asset('css/profile.css')}}" rel="stylesheet">
+@endsection
 @section('content')
 <div class="container profile">
     <div class="row">

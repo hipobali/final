@@ -1,5 +1,8 @@
 @extends('layouts.frontend.app')
 @include('layouts.frontend.nav')
+@section('title')
+Detail
+@endsection
 @section('extra_css')
     <link href="{{asset('css/news.css')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('css/welcomeCss/slick-theme.css')}}">

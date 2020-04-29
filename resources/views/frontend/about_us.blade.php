@@ -1,29 +1,16 @@
 @extends('layouts.frontend.app')
 @include('layouts.frontend.nav')
-
+@section('title')
+About
+@endsection
+@section('extra_css')
+<link rel="stylesheet" href="{{asset('css/about_us/about_us.css')}}">
+<link rel="stylesheet" href="{{asset('css/about_us/each_person_info.css')}}">
+<link rel="stylesheet" href="{{asset('css/about_us/background_div.css')}}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+@endsection
 @section('content')
-    <title>About Us</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- circle slider -->
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="{{asset('css/about_us/about_us.css')}}">
-    <!-- circle slider -->
-    <!-- each person info -->
-    <link rel="stylesheet" href="{{asset('css/about_us/each_person_info.css')}}">
-    <!-- each person info -->
-    <!-- css for background div -->
-    <link rel="stylesheet" href="{{asset('css/about_us/background_div.css')}}">
-    <!-- css for background div -->
-
-    <!-- javascript link for bootstrap -->
-{{--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-{{--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>--}}
-    <!-- javascript link for bootstrap -->
-
+   
     <!-- container -->
     <div class="container-fluid">
 
@@ -34,7 +21,6 @@
                 <h4 class="about_title_text mt-5" style="color: hsl(35,100%,50%)">OUR MAIN PURPOSE</h4>
                 <img src="{{asset('img/right_kanote.png')}}" class="right_kanote mt-5">
             </div>
-{{--            <h4 style="color: hsl(35,100%,50%)">OUR MAIN PURPOSE</h4>--}}
             <p>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; We want to serve for  the donor, the foundation and the people who needs help to be easily connected at the one place.
                 In our website, the donor can directly donate to the foundation and the people-in-need can directly access to the foundation.

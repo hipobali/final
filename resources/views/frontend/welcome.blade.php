@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <title></title>
+    <title>Welcome-HluMalLwalLwal</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('js/welcomeJs/slick-theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('js/welcomeJs/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/all.css') }}">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('fa/css/all.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Padauk:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/btn.css') }}">
+
 </head>
 
 <body>
@@ -90,7 +91,7 @@
                                 @if(is_null($foundationPosts->user_post_id))
                                     <img src="{{ url('uploads/'.$foundationPosts->f_post_image) }}"
                                         alt="Urgent_photo" width="234" height="200">
-                                    @else
+                                @else
                                     <img src="{{ url('uploads/'.$foundationPosts->userPost->image) }}"
                                         alt="Urgent_photo" width="234" height="200">
                                 @endif
