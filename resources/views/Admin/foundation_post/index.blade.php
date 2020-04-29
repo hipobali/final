@@ -1,4 +1,7 @@
 @extends('layouts.admin.main')
+@section('title')
+Foundation Post 
+@endsection
 @section('content')
 
     <div class="page-wrapper chiller-theme toggled">
@@ -46,7 +49,7 @@
                                 alt="Card image cap">
                         @endif
                     </td>
-                         <td class="text-center">{{$data->f_post_category}}</td>
+                         <td class="text-center">{{$data->category->category_name}}</td>
                         <td class="text-center">{{$data->created_at}}</td>
                          <td class="text-center">{{$data->updated_at}}</td>
                                <td><i class="fas fa-trash-alt delete_i" data-id="{{ $data->id }}" id="show_btn"></i></td>

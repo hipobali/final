@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-    <title>Easy Donate</title>
+    <link rel="icon" href="{{asset('img/logo.png')}}">
+    <title>@yield('title') HluMalLwalLwal</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ asset('fontawesome-free-5.8.2-web/css/all.css') }}">
     <link href="//fonts.googleapis.com/css?family=Fjalla+One&amp;subset=latin,latin-ext" rel="stylesheet"

@@ -1,4 +1,7 @@
 @extends('layouts.admin.main')
+@section('title')
+People Post 
+@endsection
 @section('content')
 
     <div class="page-wrapper chiller-theme toggled">
@@ -40,7 +43,7 @@
                             <td>{{ $key+1 }}</td>
                              <td class="text-center">{{$data->people_id}}</td>
                             <td class="text-center">{{$data->user_id}}</td>
-                            <td class="text-center">{{$data->title}}</td>
+                            <td class="text-center">{{$data->category->category_name}}</td>
                             <td class="text-center">{{$data->location}}</td>
                             <td class="text-center">{{$data->name}}</td>
                             <td class="text-center">{{$data->items_requested}}</td>

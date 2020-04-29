@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-    <title>Easy Donate</title>
+    <link rel="icon" href="{{asset('img/logo.png')}}">
+    <title>@yield('title') - HluMalLwalLwal</title>
 
     <link href="{{ asset('bst/css/bootstrap.css') }}" rel="stylesheet">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

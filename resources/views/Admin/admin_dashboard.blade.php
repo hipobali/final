@@ -1,5 +1,7 @@
 @extends('layouts.admin.main')
-
+@section('title')
+Dashboard
+@endsection
 @section('content')
 
 <div class="page-wrapper chiller-theme toggled">

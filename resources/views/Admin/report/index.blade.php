@@ -1,4 +1,7 @@
 @extends('layouts.admin.main')
+@section('title')
+Report Post 
+@endsection
 @section('content')
 
     <div class="page-wrapper chiller-theme toggled">
