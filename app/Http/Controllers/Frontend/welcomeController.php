@@ -11,7 +11,7 @@ class welcomeController extends Controller
     public function getWelcome()
     {
         $foundationPost=foundationPost::orderBy('id','desc')->paginate(3);
-        return view('welcome',compact('foundationPost'));
+        return view('frontend.welcome',compact('foundationPost'));
     }
 
 }

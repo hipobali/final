@@ -90,8 +90,7 @@
                                 @if(is_null($foundationPosts->user_post_id))
                                     <img src="{{ url('uploads/'.$foundationPosts->f_post_image) }}"
                                         alt="Urgent_photo" width="234" height="200">
-                                    <blade
-                                        elseif|(%24foundationPosts-%3Euser_post_id%20%3D%3D%24foundationPosts-%3EuserPost-%3Eid)%0D />
+                                    @else
                                     <img src="{{ url('uploads/'.$foundationPosts->userPost->image) }}"
                                         alt="Urgent_photo" width="234" height="200">
                                 @endif

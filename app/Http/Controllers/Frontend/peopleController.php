@@ -27,7 +27,7 @@ class peopleController extends Controller
     public function getPeoplePostView()
     {
         $category=Category::all();
-        return view('user_post')->with(['category'=>$category]);
+        return view('frontend.user_post')->with(['category'=>$category]);
     }
 
     public function postpeopleRegister(PeopleRegisterRequest $request)

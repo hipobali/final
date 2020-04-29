@@ -20,14 +20,14 @@ class donorController extends Controller
        $foundation_post=foundationPost::orderBy('id','desc')->paginate(6);
        $foundation=Foundation::all();
        $category=Category::all();
-       return view('donor_home',compact('foundation','foundation_post','category'));
+       return view('frontend.donor_home',compact('foundation','foundation_post','category'));
    }
 
     public function getDonationForm()
     {
        $foundation=Foundation::all();
        $category=Category::all();
-       return view('donation_form',compact('foundation','category'));
+       return view('frontend.donation_form',compact('foundation','category'));
     }
 
     public function postDonateForm(DonateFormRequest $request)
@@ -61,10 +61,10 @@ class donorController extends Controller
         $category=Category::all();
         if($q=='All'){
             $foundation_post=foundationPost::orderBy('id','desc')->paginate(6);
-            return view('donor_home',compact('category','foundation','foundation_post'));
+            return view('frontend.donor_home',compact('category','foundation','foundation_post'));
         }
             $foundation_post=foundationPost::orderBy('id','desc')->where('f_post_category',"LIKE","%$q%")->paginate(6);
-            return view('donor_home',compact('category','foundation','foundation_post'));
+            return view('frontend.donor_home',compact('category','foundation','foundation_post'));
     }
 
     public function getSearchFoundation(Request $request)
@@ -74,10 +74,10 @@ class donorController extends Controller
         $category=Category::all();
         if($q=='0'){
             $foundation_post=foundationPost::orderBy('id','desc')->paginate(6);
-            return view('donor_home',compact('category','foundation','foundation_post'));
+            return view('frontend.donor_home',compact('category','foundation','foundation_post'));
         }
             $foundation_post=foundationPost::orderBy('id','desc')->where('foundation_id',"LIKE","%$q%")->paginate(6);
-            return view('donor_home',compact('category','foundation','foundation_post'));
+            return view('frontend.donor_home',compact('category','foundation','foundation_post'));
     }
 
     public function getContactUs()
@@ -102,13 +102,13 @@ class donorController extends Controller
            $foundation_post=foundationPost::orderBy('id','desc')->paginate(6);
            $foundation=Foundation::all();
            $category=Category::all();
-           return view('home',compact('user_post','category','foundation_post','foundation'));
+           return view('frontend.home',compact('user_post','category','foundation_post','foundation'));
 
        }else{
            $foundation_post=foundationPost::orderBy('id','desc')->paginate(6);
            $foundation=Foundation::all();
            $category=Category::all();
-           return view('donor_home',compact('foundation_post','foundation','category'));;
+           return view('frontend.donor_home',compact('foundation_post','foundation','category'));;
 
        }
    }

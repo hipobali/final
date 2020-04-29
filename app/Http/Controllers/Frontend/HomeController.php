@@ -38,7 +38,7 @@ class HomeController extends Controller
         $foundation_post=foundationPost::orderBy('id','desc')->paginate(6);
         $foundation=Foundation::all();
         $category=Category::all();
-            return view('home',compact('user_post','foundation','foundation_post','category'));
+            return view('frontend.home',compact('user_post','foundation','foundation_post','category'));
         }
 
     public function getSearchCategory(Request $request)
@@ -49,10 +49,10 @@ class HomeController extends Controller
         $category=Category::all();
         if($q=='All'){
               $foundation_post=foundationPost::orderBy('id','desc')->paginate(6);
-              return view('home',compact('user_post','foundation','category','foundation_post'));
+              return view('frontend.home',compact('user_post','foundation','category','foundation_post'));
         }
               $foundation_post=foundationPost::orderBy('id','desc')->where('f_post_category',"LIKE","%$q%")->paginate(6);
-              return view('home',compact('category','foundation','foundation_post','user_post'));
+              return view('frontend.home',compact('category','foundation','foundation_post','user_post'));
     }
     
     public function getSearchFoundation(Request $request)
@@ -63,10 +63,10 @@ class HomeController extends Controller
         $category=Category::all();
         if($q=='0'){
              $foundation_post=foundationPost::orderBy('id','desc')->paginate(6);
-             return view('home',compact('category','foundation','foundation_post','user_post'));
+             return view('frontend.home',compact('category','foundation','foundation_post','user_post'));
         }
              $foundation_post=foundationPost::orderBy('id','desc')->where('foundation_id',"LIKE","%$q%")->paginate(6);
-             return view('home',compact('category','foundation','foundation_post','user_post'));
+             return view('frontend.home',compact('category','foundation','foundation_post','user_post'));
     }
 
     public function profile(Request $request){

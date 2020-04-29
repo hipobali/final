@@ -32,7 +32,7 @@ class FoundationController extends Controller
         $foundation=Foundation::all();
         $foundationPost=foundationPost::all();
         $category=Category::all();
-        return view('foundation_request_page',compact('donateForm','user_post','foundation','category','foundationPost'));
+        return view('frontend.foundation_request_page',compact('donateForm','user_post','foundation','category','foundationPost'));
     }
 
     public function postFoundationRegister(FoundationRegisterRequest $request)
