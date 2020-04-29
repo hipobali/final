@@ -8,7 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>EasyDonate</title>
+    <link rel="icon" href="{{asset('img/logo.png')}}">
+    <title>@yield('title') - HluMalLwalLwal</title>
 
     <link href="{{ asset('bst/css/bootstrap.css') }}" rel="stylesheet">
     <script src="{{ asset('bst/js/jquery.js') }}"></script>
